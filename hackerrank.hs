@@ -39,6 +39,4 @@ rotate n xs = drop n xs ++ take n xs
 proc :: String -> [String]
 proc xs = zipWith rotate [1..ln] (replicate ln xs)
           where ln = length xs
-
-solve :: String -> String
-solve = undefined          
+      
