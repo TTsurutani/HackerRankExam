@@ -13,7 +13,7 @@ main = do
     mapM_ print ys 
 -}
 main :: IO()
-main = getContents >>=  mapM_ (print . proc) . tail . lines
+main = getContents >>=  mapM_ (output . proc) . tail . lines
 
 
 rotate :: Int -> String -> String
@@ -27,9 +27,8 @@ proc :: String -> [String]
 proc xs = zipWith rotate [1..ln] (replicate ln xs)
           where ln = length xs
 
-{-- 
 output :: [String] -> IO()
-output (x:xs) = do 
-                 putStr x
-                 output xs
---}                 
+output [] = putStrLn ""
+output (x:xs) = putStr x >> putStr " " >> output xs
+
+-- type RotateString.txt | stack runghc RotateString.hs
