@@ -2,9 +2,25 @@ import Data.List
 main :: IO()
 main = do
     [_ , xs , _ , ys ] <- map words.lines <$> getContents
-    print  xs
-    print  ys
+    output $ nub $ func (sort xs) (sort ys)
 
+-- 単純にリストの差分をとったうえで、nubすればいい
+
+
+-- | リストBにはあって、Aにはないもののリスト
+func :: Eq a => [a] -> [a] -> [a]
+func [] _ = []
+func (x:xs) (y:ys)
+        | x == y    = func xs ys
+        | otherwise = y : func xs ys 
+
+output :: [String] -> IO()
+output [] = putStrLn ""
+output (x:xs) = putStr x >> putStr " " >> output xs
+
+-- type MissingNumbers.txt | stack runghc MissingNumbers.hs
+
+{--
 -- | リストに要素が含まれる数を返す
 elements ::Eq a => a -> [a] -> Int
 elements _ [] = 0
@@ -23,5 +39,4 @@ delelm x (y:ys)
 pairs :: Eq a => [a] -> [(a,Int)]
 pairs [] = []
 pairs (x:xs) = (x, elements x xs + 1) : pairs (delelm x xs)
-
--- type MissingNumbers.txt | stack runghc MissingNumbers.hs
+ --}
