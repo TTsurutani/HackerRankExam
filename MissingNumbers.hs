@@ -22,8 +22,6 @@ delelm x (y:ys)
 -- | リストをキーとカウントのペアに変換
 pairs :: Eq a => [a] -> [(a,Int)]
 pairs [] = []
-pairs (x:xs) = (x , elements x xs + 1) : pairs ys
-         where
-            ys = delelm x xs
+pairs (x:xs) = (x, elements x xs + 1) : pairs (delelm x xs)
 
--- type MissingNumbers.txt | stack runghc MissingNumbers.hs    
+-- type MissingNumbers.txt | stack runghc MissingNumbers.hs
