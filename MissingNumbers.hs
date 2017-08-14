@@ -5,15 +5,25 @@ main = do
     print  xs
     print  ys
 
+-- | リストに要素が含まれる数を返す
 elements ::Eq a => a -> [a] -> Int
 elements _ [] = 0
 elements x (y:ys)
        | x == y    = elements x ys + 1
        | otherwise = elements x ys
 
-counts :: [a] -> [(a,Int)]
-counts [] = []
+-- | リストに含まれる要素を除去する
+delelm :: Eq a => a -> [a] -> [a]
+delelm _ [] = []
+delelm x (y:ys)
+      | x == y    = delelm x ys
+      | otherwise = y:delelm x ys
 
-
+-- | リストをキーとカウントのペアに変換
+pairs :: Eq a => [a] -> [(a,Int)]
+pairs [] = []
+pairs (x:xs) = (x , elements x xs + 1) : pairs ys
+         where
+            ys = delelm x xs
 
 -- type MissingNumbers.txt | stack runghc MissingNumbers.hs    
