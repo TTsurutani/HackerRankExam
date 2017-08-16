@@ -1,7 +1,9 @@
 main ::IO()
 main = do
     _:list:_:xs <- lines <$> getContents
-    print $ map (read::String->Int) $ words list
+    let subsetlist = subset $ map (read::String->Int) $ words list
+    let sumlist = map sum subsetlist
+    print sumlist
     print $ map (read::String->Int) xs
 
 -- |
