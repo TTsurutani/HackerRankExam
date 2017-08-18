@@ -9,3 +9,6 @@
 -- 22
 -- >>> penta 5
 -- 35
+
+
+-- https://www.hackerrank.com/challenges/pentagonal-numbers?utm_campaign=challenge-recommendation&utm_medium=email&utm_source=24-hour-campaign

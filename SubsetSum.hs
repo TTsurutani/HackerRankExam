@@ -20,3 +20,4 @@ subset (x:xs) =  map ([x] ++) (subset xs) ++ subset xs
 
 
 -- type SubsetSum.txt | stack runghc SubsetSum.hs
+-- https://www.hackerrank.com/challenges/subset-sum

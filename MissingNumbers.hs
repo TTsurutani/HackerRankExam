@@ -19,6 +19,7 @@ output [] = putStrLn ""
 output (x:xs) = putStr x >> putStr " " >> output xs
 
 -- type MissingNumbers.txt | stack runghc MissingNumbers.hs
+-- https://www.hackerrank.com/challenges/missing-numbers-fp
 
 {--
 -- | リストに要素が含まれる数を返す
