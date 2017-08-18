@@ -5,7 +5,7 @@ main = do
     -- a = "148" n = "3"
     let x = concat $ replicate (stringToInt n) a
     -- x = "148148148"
-    print $ sumString x
+    putStrLn $ superDigit x
 
 stringToInt :: String -> Int
 stringToInt = read::String->Int
@@ -15,6 +15,11 @@ charToInt x = ord x - 48
 
 sumString :: String -> Integer
 sumString = foldr ((+) . toInteger . charToInt) 0
+
+superDigit :: String -> String
+superDigit x 
+        | length x == 1 = x
+        | otherwise     = superDigit $ show $ sumString x
 
 {--
 sumString [] = 0
