@@ -3,9 +3,8 @@ main::IO()
 main = do 
     [a,n] <- words <$> getContents
     -- a = "148" n = "3"
-    let x = concat $ replicate (stringToInt n) a
-    -- x = "148148148"
-    putStrLn $ superDigit x
+    let x = toInteger(stringToInt n) * sumString a
+    putStrLn $ superDigit (show x)
 
 stringToInt :: String -> Int
 stringToInt = read::String->Int
