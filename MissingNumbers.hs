@@ -18,7 +18,7 @@ output :: [String] -> IO()
 output [] = putStrLn ""
 output (x:xs) = putStr x >> putStr " " >> output xs
 
--- type MissingNumbers.txt | stack runghc MissingNumbers.hs
+-- type input\MissingNumbers.txt | stack runghc MissingNumbers.hs
 -- https://www.hackerrank.com/challenges/missing-numbers-fp
 
 {--

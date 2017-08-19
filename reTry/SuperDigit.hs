@@ -41,7 +41,7 @@ getSumStr (x:xs) = (ord x - ord '0') + getSumStr xs
 sumString [] = 0
 sumString (x:xs) = toInteger (charToInt x) + sumString xs
 
--- type SuperDigit.txt | stack runghc SuperDigit.hs
+-- type input\SuperDigit.txt | stack runghc SuperDigit.hs
 -- https://www.hackerrank.com/challenges/super-digit
 
  --}

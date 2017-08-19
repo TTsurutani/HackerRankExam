@@ -22,5 +22,5 @@ getMultipleLines n
         let ret = (x:xs)    
         return ret
 
--- type UtopianTree.txt | runghc UtopianTree.hs
+-- type input\UtopianTree.txt | runghc UtopianTree.hs
 -- https://www.hackerrank.com/challenges/utopian-tree

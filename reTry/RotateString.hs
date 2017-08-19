@@ -27,7 +27,7 @@ output :: [String] -> IO()
 output [] = putStrLn ""
 output (x:xs) = putStr x >> putStr " " >> output xs
 
--- type RotateString.txt | stack runghc RotateString.hs
+-- type input\RotateString.txt | stack runghc RotateString.hs
 
 {-- 
 import Data.List
