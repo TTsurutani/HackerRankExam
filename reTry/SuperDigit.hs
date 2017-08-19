@@ -21,6 +21,23 @@ superDigit x
         | otherwise     = superDigit $ show $ sumString x
 
 {--
+import Data.List
+import Data.Char
+main :: IO ()
+main = getContents >>= print. (\[n, k] -> superDigit ((read k) * (getSumStr n))). words
+
+superDigit n
+  | n < 10 = n
+  | otherwise = superDigit (getSum n)
+
+getSum 0 = 0
+getSum n = n`rem`10 + getSum (n`div`10)
+
+getSumStr [] = 0
+getSumStr (x:xs) = (ord x - ord '0') + getSumStr xs
+ --}
+
+{--
 sumString [] = 0
 sumString (x:xs) = toInteger (charToInt x) + sumString xs
 
