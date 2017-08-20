@@ -1,9 +1,9 @@
 main :: IO()
 main = do
-    _ : input <- lines <$> getContents
-    print input
-
-
+    _ : n :lst :xs <- lines <$> getContents
+    print n
+    print lst
+    print xs
 
 -- type input\FilterElements.txt | stack runghc FilterElements.hs
 -- https://www.hackerrank.com/challenges/filter-elements

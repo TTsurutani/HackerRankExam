@@ -9,6 +9,7 @@ main = do
 --    print sumlist
 --    print target
     forM_ target (\x -> print (filter (>= x) sumlist))
+    
 
 -- |
 -- >>> subset [1,2,3]
