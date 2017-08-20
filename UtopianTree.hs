@@ -2,8 +2,7 @@ import Control.Applicative
 main :: IO()
 main = do
    _ : input <- lines <$> getContents
-   let list = map (read::String->Int) input
-   mapM_ (print . utopian) list
+   mapM_ (print . utopian) (map (read::String->Int) input)
 
 utopian :: Int -> Int   
 utopian 0 = 1
