@@ -18,5 +18,4 @@ summit 2 = 5
 summit n = summit (n - 1) + 5*(n - 1)
 
 -- type input\PentagonalNumbers.txt | stack runghc PentagonalNumbers.hs
-
 -- https://www.hackerrank.com/challenges/pentagonal-numbers
