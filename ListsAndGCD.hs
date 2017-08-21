@@ -1,0 +1,2 @@
+-- type input\ListsAndGCD.txt | ListsAndGCD.hs
+-- https://www.hackerrank.com/challenges/lists-and-gcd

@@ -12,4 +12,4 @@
 
 -- type input\PentagonalNumbers.txt | PentagonalNumbers.hs
 
--- https://www.hackerrank.com/challenges/pentagonal-numbers?utm_campaign=challenge-recommendation&utm_medium=email&utm_source=24-hour-campaign
+-- https://www.hackerrank.com/challenges/pentagonal-numbers?
