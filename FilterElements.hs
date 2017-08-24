@@ -8,7 +8,6 @@ main = do
 -- type input\FilterElements.txt | stack runghc FilterElements.hs
 -- https://www.hackerrank.com/challenges/filter-elements
 
--- filter (>2) $ nub [4, 5, 2, 5, 4, 3, 1, 3, 4]
 {-- 
 Sample Input
 3                   :test case count
