@@ -1,3 +1,4 @@
+import Data.Function.Memoize
 main :: IO()
 main = do
     _ : xs <- lines <$> getContents
@@ -12,10 +13,13 @@ penta 1 = 1
 penta 2 = 5
 penta n = summit (n - 1) + (n - 1)*5 - (n + n*(n-3))
 
+summitMemo :: Int -> Int
+summitMemo = memoize summit
+
 summit :: Int -> Int
 summit 1 = 1
 summit 2 = 5
-summit n = summit (n - 1) + 5*(n - 1)
+summit n = summitMemo (n - 1) + 5*(n - 1)
 
 -- type input\PentagonalNumbers.txt | stack runghc PentagonalNumbers.hs
 -- https://www.hackerrank.com/challenges/pentagonal-numbers

@@ -13,3 +13,6 @@ main :: IO ()
 main = getContents >>= mapM_ (printf "%.1f\n"). 
                        (\[a, b, [l, r]] -> solve l r a b). 
                        map (map read. words). lines
+
+-- https://www.hackerrank.com/challenges/area-under-curves-and-volume-of-revolving-a-curv
+                       

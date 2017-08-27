@@ -6,7 +6,7 @@ main = do
     print $ map words list
 
 countMemo :: Int -> Int -> Int
-countMemo = memoize count    
+countMemo = memoize2 count    
 
 
 count :: Int -> Int -> Int
