@@ -3,8 +3,13 @@ import Data.Function.Memoize
 main :: IO()
 main = do
     _:list <- lines <$> getContents
-    print $ map words list
+    -- ["2 1","5 1","5 2","5 3","10 5"] :[[Char]]
+    let temp = map words list
+    -- [["2","1"],["5","1"],["5","2"],["5","3"],["10","5"]]
+    let ans = map (\(n:k:_) -> count (read n) (read k)) temp
+    mapM_ print ans
 
+ 
 countMemo :: Int -> Int -> Int
 countMemo = memoize2 count    
 
