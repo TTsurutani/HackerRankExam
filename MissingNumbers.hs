@@ -1,4 +1,4 @@
-import Data.List
+-- import Data.List
 main :: IO()
 main = do
     [_ , xs , _ , ys ] <- map words.lines <$> getContents
@@ -16,8 +16,9 @@ func (x:xs) (y:ys)
         | otherwise = y : func xs ys 
 
 output :: [String] -> IO()
-output [] = putStrLn ""
-output (x:xs) = putStr x >> putStr " " >> output xs
+output = foldr (\ x -> (>>) (putStr x >> putStr " ")) (putStrLn "") 
+-- output [] = putStrLn ""
+-- output (x:xs) = putStr x >> putStr " " >> output xs
 
 -- type input\MissingNumbers.txt | stack runghc MissingNumbers.hs
 -- https://www.hackerrank.com/challenges/missing-numbers-fp
