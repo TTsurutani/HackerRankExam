@@ -1,10 +1,10 @@
 main :: IO()
 main = do
     _:list <- lines <$> getContents
-    mapM_ print $ map solve list
+    mapM_ (print . solve) list
 
 solve :: String -> Int
-solve xs = (length xs) - (length $ del xs)
+solve xs = length xs - length (del xs)
 
 del :: String -> String
 del [x] = [x]
