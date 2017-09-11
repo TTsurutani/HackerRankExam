@@ -6,8 +6,6 @@ main = do
     let subsetlist = subset $ map (read::String->Int) $ words list
     let sumlist = map sum subsetlist
     let target = map (read::String->Int) xs
---    print sumlist
---    print target
     forM_ target (\x -> print (filter (>= x) sumlist))
     
 
