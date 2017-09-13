@@ -2,7 +2,7 @@ import Data.List
 main :: IO()
 main = do
     [_ , xs , _ , ys ] <- Prelude.map words.lines <$> getContents
-    output $ sort $ (\\) ys xs
+    output $ sort $ nub $ (\\) ys xs
 
 output :: [String] -> IO()
 output = Prelude.foldr (\ x -> (>>) (putStr x >> putStr " ")) (putStrLn "") 
@@ -12,6 +12,9 @@ output = Prelude.foldr (\ x -> (>>) (putStr x >> putStr " ")) (putStrLn "")
 -- type input\MissingNumbers.txt | stack runghc MissingNumbers.hs
 -- https://www.hackerrank.com/challenges/missing-numbers-fp
 
+-- case01 expected
+-- 3670 3674 3677 3684 3685 3695 3714 3720
+-- 3670 3674 3677 3684 3685 3685 3695 3714 3720 -- 3685 duplicate
 
 -- | リストに要素が含まれる数を返す
 elements ::Eq a => a -> [a] -> Int
