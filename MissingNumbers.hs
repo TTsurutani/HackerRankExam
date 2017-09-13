@@ -1,27 +1,17 @@
--- import Data.List
+import Data.List
 main :: IO()
 main = do
-    [_ , xs , _ , ys ] <- map words.lines <$> getContents
-    print $ pairs xs
-    print $ pairs ys
-
--- 単純にリストの差分をとったうえで、nubすればいい
-
-
--- | リストBにはあって、Aにはないもののリスト
-func :: Eq a => [a] -> [a] -> [a]
-func [] _ = []
-func (x:xs) (y:ys)
-        | x == y    = func xs ys
-        | otherwise = y : func xs ys 
+    [_ , xs , _ , ys ] <- Prelude.map words.lines <$> getContents
+    output $ sort $ (\\) ys xs
 
 output :: [String] -> IO()
-output = foldr (\ x -> (>>) (putStr x >> putStr " ")) (putStrLn "") 
+output = Prelude.foldr (\ x -> (>>) (putStr x >> putStr " ")) (putStrLn "") 
 -- output [] = putStrLn ""
 -- output (x:xs) = putStr x >> putStr " " >> output xs
 
 -- type input\MissingNumbers.txt | stack runghc MissingNumbers.hs
 -- https://www.hackerrank.com/challenges/missing-numbers-fp
+
 
 -- | リストに要素が含まれる数を返す
 elements ::Eq a => a -> [a] -> Int
@@ -41,3 +31,11 @@ delelm x (y:ys)
 pairs :: Eq a => [a] -> [(a,Int)]
 pairs [] = []
 pairs (x:xs) = (x, elements x xs + 1) : pairs (delelm x xs)
+
+
+-- | リストBにはあって、Aにはないもののリスト
+func :: Eq a => [a] -> [a] -> [a]
+func [] _ = []
+func (x:xs) (y:ys)
+        | x == y    = func xs ys
+        | otherwise = y : func xs ys 
