@@ -9,10 +9,12 @@ main = do
 -- https://www.hackerrank.com/challenges/filter-elements
 
 {-- 
+指定された回数以上、出現する要素を出現順に出力する
+処理に必要なのはKとListのみ
 Sample Input
 3                   :test case count
-9 2                 :list size & repetition count
-4 5 2 5 4 3 1 3 4   :list (4*2 5*2 2*1 3*2 1*1)
+9 2                 :list size & repetition count(=K)
+4 5 2 5 4 3 1 3 4   :list (4*2 5*2 2*1 3*2 1*1) = List A
 9 4
 4 5 2 5 4 3 1 3 4
 10 2

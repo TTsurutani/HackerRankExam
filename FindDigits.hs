@@ -2,7 +2,7 @@ main :: IO()
 main = do
     _ : list <- lines <$> getContents
     -- ["12","1012"]
-    print list
+    print $ map words list
 
 -- 数字文字列を受けて、条件に合致する数を返す
 --　数字を数値に
