@@ -1,4 +1,4 @@
-import Data.Function.Memoize
+-- import Data.Function.Memoize
 
 main :: IO()
 main = do
