@@ -1,7 +1,24 @@
 main :: IO()
 main = do
-    _:list <- mapM string2Int.lines <$> getContents
-    print list
+    _:xs <- lines <$> getContents
+ --   let list = map string2Int xs
+ --   let ans = map f list
+ --   mapM_ print ans
+    mapM_ (print . g . string2Int) xs
+
+
+--　素数リストで割り切れたところで終わり
+f = undefined
+
+-- 入力値以内の素数の逆順リスト    
+g :: Integer -> [Integer]
+g n = reverse $ takeWhile (<= n ) primes
+-- リストの先頭で以降を篩う    
+sieve :: [Integer] -> [Integer]
+sieve (x:xs) = x : [y | y <- xs, y `mod` x /= 0]
+
+primes :: [Integer]
+primes = 2:sieve[3,5..]
 
 string2Int :: String -> Integer
 string2Int = read    
