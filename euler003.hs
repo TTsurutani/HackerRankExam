@@ -1,14 +1,18 @@
 main :: IO()
 main = do
     _:xs <- lines <$> getContents
- --   let list = map string2Int xs
- --   let ans = map f list
- --   mapM_ print ans
-    mapM_ (print . g . string2Int) xs
-
+    let list = map string2Int xs
+    -- [10,17]
+    let sieveList = map g list
+    -- [[7,5,3,2],[17,13,11,7,5,3,2]]
+    let ans = zipWith f list sieveList
+    mapM_ print ans
 
 --　素数リストで割り切れたところで終わり
-f = undefined
+f :: Integer -> [Integer] -> Integer
+f x (y:ys)
+  | x `mod` y == 0 = y
+  | otherwise = f x ys
 
 -- 入力値以内の素数の逆順リスト    
 g :: Integer -> [Integer]
