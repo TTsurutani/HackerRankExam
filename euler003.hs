@@ -9,22 +9,22 @@ main = do
     mapM_ print ans
 
 --　素数リストで割り切れたところで終わり
-f :: Integer -> [Integer] -> Integer
+f :: Int -> [Int] -> Int
 f x (y:ys)
   | x `mod` y == 0 = y
   | otherwise = f x ys
 
 -- 入力値以内の素数の逆順リスト    
-g :: Integer -> [Integer]
+g :: Int -> [Int]
 g n = reverse $ takeWhile (<= n ) primes
 -- リストの先頭で以降を篩う    
-sieve :: [Integer] -> [Integer]
-sieve (x:xs) = x : [y | y <- xs, y `mod` x /= 0]
+sieve :: [Int] -> [Int]
+sieve (p:xs) = p : sieve [x | x <- xs, x `mod` p /= 0]
 
-primes :: [Integer]
-primes = 2:sieve[3,5..]
+primes :: [Int]
+primes = sieve [2..]
 
-string2Int :: String -> Integer
+string2Int :: String -> Int
 string2Int = read    
 
 -- https://www.hackerrank.com/contests/projecteuler/challenges/euler003
