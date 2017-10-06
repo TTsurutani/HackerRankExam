@@ -2,8 +2,7 @@ main :: IO()
 main = do
     _ : xs <- lines <$> getContents
     let input = map string2Int xs
-    mapM_ (print . f) input
---    
+    mapM_ (print . f) input   
 
 f :: Int -> Int
 f n = primes !! (n - 1)
