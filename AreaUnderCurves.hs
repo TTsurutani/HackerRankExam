@@ -1,12 +1,20 @@
 import Text.Printf (printf)
 
 -- This function should return a list [area, volume].
--- aは基数、bは累乗のリスト lとrはxの値。結果は2行に出力
--- ax^b + ・・・・
+
+
+-- |
+-- >>> solve 1 4 [1,2,3,4,5] [6,7,8,9,10]
+-- [2435300.3,26172951168940.8]
 solve :: Int -> Int -> [Int] -> [Int] -> [Double]
-solve l r a b = forM [l,r] sum $ zipWith func a b l
-      where
-        func (x:xs) (y:ys) = x      
+solve l r a b = [area , volume]
+
+area :: Int -> Int -> [Int] -> [Int] -> Double
+area l r a b = undefined
+
+volume :: Int -> Int -> [Int] -> [Int] -> Double
+volume l r a b = undefined
+
 
 --Input/Output.
 main :: IO ()
