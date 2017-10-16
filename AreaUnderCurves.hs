@@ -19,7 +19,7 @@ areaCalc :: Int -> [Int] -> [Int] -> Double
 areaCalc n as bs = sum (zipWith (f n) as bs)
 
 f :: Int -> Int -> Int -> Double
-f n a b = (ax/(bx+1))*(nx**(bx+1))
+f n a b = ax*(nx**(bx+1))/(bx+1)
     where
         ax = fromIntegral a
         bx = fromIntegral b
