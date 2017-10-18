@@ -15,20 +15,19 @@ import Text.Printf (printf)
 -- area :: Int -> Int -> [Int] -> [Int] -> Double
 --area l r a b = areaCalc r a b - areaCalc l a b
 
-areaCalc :: Int -> [Int] -> [Int] -> Double
-areaCalc n as bs = sum (zipWith (f n) as bs)
+--areaCalc :: Int -> [Int] -> [Int] -> Double
+--areaCalc n as bs = sum (zipWith (f n) as bs)
 
-f :: Int -> Int -> Int -> Double
---f n a b = ax*(nx**(bx+1))/(bx+1)
-f a b n = ax*(nx**bx)
-    where
-        ax = fromIntegral a
-        bx = fromIntegral b
-        nx = fromIntegral n
+f :: Int -> [Int] -> [Int] -> Double
+f x as bs = sum $ zipWith (g x) as bs
+--f x a b = a'*(x'**(b'+1))/(b'+1) 積分公式版
 
-area :: Int -> Int -> [Int] -> [Int] -> Double
---area l r a b = areaCalc r a b - areaCalc l a b
-area l r a b  = sum $ map (\n->f a b) [l,l+0.01..r]
+-- 与えられた引数からなる多項式を１項生成
+g :: Int -> Int -> Int -> Double
+g x a b = fromIntegral a *(fromIntegral x ** fromIntegral b)
+
+--area :: Int -> Int -> [Int] -> [Int] -> Double
+--area l r a b = sum $ map (f a b) [l,l + 0.01..r]
 
 
 --Input/Output
