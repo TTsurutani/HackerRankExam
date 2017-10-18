@@ -19,14 +19,16 @@ areaCalc :: Int -> [Int] -> [Int] -> Double
 areaCalc n as bs = sum (zipWith (f n) as bs)
 
 f :: Int -> Int -> Int -> Double
-f n a b = ax*(nx**(bx+1))/(bx+1)
+--f n a b = ax*(nx**(bx+1))/(bx+1)
+f a b n = ax*(nx**bx)
     where
         ax = fromIntegral a
         bx = fromIntegral b
         nx = fromIntegral n
 
-volume :: Int -> Int -> [Int] -> [Int] -> Double
-volume l r a b = areaCalc r a b - areaCalc l a b
+area :: Int -> Int -> [Int] -> [Int] -> Double
+--area l r a b = areaCalc r a b - areaCalc l a b
+area l r a b  = sum $ map (\n->f a b) [l,l+0.01..r]
 
 
 --Input/Output
