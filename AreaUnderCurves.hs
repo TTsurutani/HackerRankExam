@@ -18,8 +18,8 @@ import Text.Printf (printf)
 --areaCalc :: Int -> [Int] -> [Int] -> Double
 --areaCalc n as bs = sum (zipWith (f n) as bs)
 
-f :: Int -> [Int] -> [Int] -> Double
-f x as bs = sum $ zipWith (g x) as bs
+f :: [Int] -> [Int] -> Int -> Double
+f as bs x = sum $ zipWith (g x) as bs
 --f x a b = a'*(x'**(b'+1))/(b'+1) 積分公式版
 
 -- 与えられた引数からなる多項式を１項生成
@@ -27,8 +27,11 @@ g :: Int -> Int -> Int -> Double
 g x a b = fromIntegral a *(fromIntegral x ** fromIntegral b)
 
 --area :: Int -> Int -> [Int] -> [Int] -> Double
---area l r a b = sum $ map (f a b) [l,l + 0.01..r]
+area l r a b = sum $ map (f a b) [l',l' + 0.001..r']
+                where l' = fromIntegral l
+                      r' = fromIntegral r
 
+ 
 
 --Input/Output
 {--
