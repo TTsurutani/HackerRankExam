@@ -2,7 +2,7 @@
 Sample Input 0
 2
 10 5 (n k)
-3675356291
+3675356291 (xs)
 10 5
 2709360626
 
@@ -13,24 +13,30 @@ Sample Output 0
 import Data.Char
 main :: IO()
 main = do 
-    [xs] <- lines <$> getContents
-    print $ solve "13" xs
+    _ : input <- lines <$> getContents
+    -- ["10 5","3675356291","10 5","2709360626"]
+    mapM_ print $ map (\(x,y) -> solve x y) $ (barasu input)
+
+barasu :: [String] -> [(String, String)]
+barasu [] = []
+barasu (x:y:xs) =  (((words x)!! 1) , y ) : barasu xs
 
 sep :: String -> String -> [String]
 sep n xs 
     | length xs == string2Int n = [xs]
     | otherwise = take (string2Int n) xs : sep n (tail xs)
--- | 切り出した要素に対して積を計算する
+
+    -- |
 -- >>> multi "67535"
 -- 3150
 multi :: String -> Int
 multi xs = product $ map digitToInt xs
 
--- | kと数字をとって、答えを返す
+-- | 
 -- >>> solve "5" "3675356291"
 -- 3150
 solve :: String -> String -> Int
-solve n xs = maximum $ map multi $ sep n xs
+solve k xs = maximum $ map multi $ sep k xs
 
 string2Int :: String -> Int
 string2Int = read    
