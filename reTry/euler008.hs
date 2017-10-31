@@ -15,11 +15,13 @@ main :: IO()
 main = do 
     _ : input <- lines <$> getContents
     -- ["10 5","3675356291","10 5","2709360626"]
-    mapM_ print $ map (\(x,y) -> solve x y) $ (barasu input)
+    mapM_ (print . uncurry solve) (barasu input)
+-- mapM_ print $ map (uncurry solve) (barasu input)    
+-- mapM_ print $ map (\ (x, y) -> solve x y) (barasu input)    
 
 barasu :: [String] -> [(String, String)]
 barasu [] = []
-barasu (x:y:xs) =  (((words x)!! 1) , y ) : barasu xs
+barasu (x:y:xs) =  (words x !! 1, y) : barasu xs
 
 sep :: String -> String -> [String]
 sep n xs 
