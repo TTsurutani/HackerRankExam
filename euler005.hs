@@ -11,6 +11,7 @@ main = do
 -- [True,True,True,True,True,True,True,True,True]
 judge :: Int -> Int-> Bool
 judge num target = not $ all (divable target) [2 .. num]
+--takeWhileするために結果を逆転させている。超付け焼刃的。
 
 divable :: Int -> Int -> Bool
 divable target n
