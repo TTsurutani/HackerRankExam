@@ -24,3 +24,4 @@ string2Int :: String -> Int
 string2Int = read
 
 -- type input\testSnipet.txt | stack runghc testSnipet.hs
+
