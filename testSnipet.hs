@@ -1,3 +1,5 @@
+import Data.List
+import Data.Char
 main :: IO()
 main = do
     xs <- getContents
@@ -22,6 +24,20 @@ primes = sieve [2..]
 
 string2Int :: String -> Int
 string2Int = read
+
+validateHello :: String -> Bool
+validateHello cs = any (isSubset cs) ["hello","ciao","salut","hallo","hola","ahoj","czesc"]
+
+-- isSubset full sub 
+isSubset :: Eq a => [a] -> [a] -> Bool
+isSubset [] [] = True
+isSubset _ [] = True
+isSubset [] _ = False
+isSubset (x:xs) z@(y:ys)
+  | x == y    = isSubset xs ys
+  | otherwise = isSubset xs z
+
+  
 
 -- type input\testSnipet.txt | stack runghc testSnipet.hs
 
