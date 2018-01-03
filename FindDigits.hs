@@ -5,20 +5,23 @@ main = do
     _ : list <- lines <$> getContents
     -- ["12","1012"]
     let x1 = map (read::String->Int) list
-    let x2 = map (nub.sep) list
-    print x1
-    print x2
+    -- [12,1012]
+    let x2 = map sep list
+    -- [[1,2],[1,0,1,2]]
+    let x3 = zip x1 x2
+    -- [(12,[1,2]),(1012,[1,0,1,2])]
+    let x4 = map f x3
+    mapM_ print x4
 
--- 数字文字列を受けて、条件に合致する数を返す
---　数字を数値に
---　数字をばらしながら数値に
---　ばらした数値のリストをnub
--- nubした数値でリストをカウント
---　nubした数値で元数字を割って対象か否かを判定、Trueなら積算
-
+-- |
+-- >> sep "1234" 
+-- [1,2,3,4]
 sep :: String -> [Int]
-sep [] = []
-sep (x:xs) = digitToInt x : sep xs
+sep = map digitToInt
+
+
+f :: Integral a => (a, [a]) -> Int
+f (n,xs) = length $ filter (\x -> n `mod` x == 0) $ filter (/= 0) xs
 
 
 -- type input\FindDigits.txt | stack runghc FindDigits.hs
