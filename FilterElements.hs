@@ -1,9 +1,30 @@
 main :: IO()
 main = do
-    _ : n :lst :xs <- lines <$> getContents
-    print n
-    print lst
-    print xs
+    _ :xs <- lines <$> getContents
+    let list = makePair $ map (map string2Int . words) xs
+    print list
+
+string2Int :: String -> Int
+string2Int = read    
+
+makePair :: [[Int]] -> [(Int,[Int])]
+makePair [] = []
+makePair ([_,n]:list:xs) = (n,list):makePair xs
+
+count :: [Int] -> [(Int,Int)]
+count [] = []
+count (a:as) = count' (a:as) [] 
+
+--このロジックだと既存が先頭にないと足し込めない
+--中腹にあるペアをkeyで特定して更新する機能が必要
+--intMapとかが使えそうだが、使い方がわからない
+count' :: [Int] -> [(Int,Int)]->[(Int,Int)]
+count' [] [] = []
+count' [] zs = zs
+count' (x:xs) ((y,n):ys)
+  | x == y    = count' xs ((y,n+1):ys)
+  | otherwise = count' xs ((x,1):(y,n):ys)
+count' (x:xs) [] = count' xs [(x,1)]   
 
 -- type input\FilterElements.txt | stack runghc FilterElements.hs
 -- https://www.hackerrank.com/challenges/filter-elements
