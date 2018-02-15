@@ -1,9 +1,43 @@
 main :: IO()
 main = do
-    _ : n :lst :xs <- lines <$> getContents
-    print n
-    print lst
-    print xs
+    _ :xs <- lines <$> getContents
+    let list = makePair $ map (map string2Int . words) xs    
+    mapM_ (putStrLn . unwords . map show . solve) list
+
+string2Int :: String -> Int
+string2Int = read    
+
+--入力から、個々の設問の入力のリストを作成
+makePair :: [[Int]] -> [(Int,[Int])]
+makePair [] = []
+makePair ([_,n]:list:xs) = (n,list):makePair xs
+
+--個々の設問から答え（リスト）を返す
+--ペアのsndをcountする→結果をfilterしてfstのリストを返す
+solve :: (Int,[Int]) -> [Int]
+solve (x,ys)  
+  | null list = [-1]
+  | otherwise = map fst list
+    where
+      list = filter (\m -> snd m >= x) $ count [] ys
+
+--蓄積関数を使って、数字とカウントのペアを作る
+count :: [(Int,Int)] -> [Int] -> [(Int,Int)] 
+count xs [] = xs
+count xs (y:ys)
+  | found y xs = count (add y xs) ys
+  | otherwise = count (xs ++ [(y,1)]) ys
+
+found :: Int -> [(Int,Int)] -> Bool
+found _ [] = False
+found x ((y,_):ls)
+  | x == y = True
+  | otherwise = found x ls
+
+add :: Int -> [(Int,Int)] -> [(Int,Int)]
+add k ((l,m):ls)
+  | k == l = (k,m+1) : ls
+  | otherwise = (l,m) : add k ls
 
 -- type input\FilterElements.txt | stack runghc FilterElements.hs
 -- https://www.hackerrank.com/challenges/filter-elements
