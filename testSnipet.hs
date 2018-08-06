@@ -12,7 +12,8 @@ main = do
     -- map(map f)はリストの入れ子の中身にfを適用するため
     -- print $ map (map string2Int) (map words (lines xs))
     --}
-    print $ map (map string2Int . words) $ lines xs
+    --print $ map (map string2Int . words) $ lines xs
+    print . map (map string2Int . words) . lines $ xs
 
 sieve :: [Int] -> [Int]
 sieve (p:xs) = p : sieve [x | x <- xs, x `mod` p /= 0]
