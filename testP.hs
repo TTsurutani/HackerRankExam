@@ -28,13 +28,17 @@ main = do
   anyChecks "B-2-05,6 OPEN&CLOSE : "           ["OPEN","CLOSE"] xs
   anyChecks "6-01 ORG : "                      ["ORG"] xs
 
-anyChecks :: String -> [String] -> [String] -> IO()
+
+type Notion = String
+type SourceCode = [String]
+type Keyword = String
+anyChecks :: Notion -> [Keyword] -> SourceCode -> IO()
 anyChecks _ [] _ = putStr ""
 anyChecks notion (c:cs) xs
   | c `isIncluded` xs = putStrLn notion
   | otherwise = anyChecks notion cs xs        
 
-andChecks :: String -> [String] -> [String] -> IO()
+andChecks :: Notion -> [Keyword] -> SourceCode -> IO()
 andChecks notion [] _ = putStrLn notion
 andChecks notion (c:cs) xs
   | c `isIncluded` xs = andChecks notion cs xs
@@ -47,7 +51,7 @@ andChecks notion (c:cs) xs
 -- >>> isIncluded "key" ["aaa","bbb"]
 -- False 
 
-isIncluded :: String -> [String] -> Bool
+isIncluded :: Keyword -> SourceCode -> Bool
 isIncluded _ [] = False
 isIncluded key (xs:xss)
   | key `isInfixOf` xs = True
