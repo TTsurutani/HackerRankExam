@@ -3,7 +3,7 @@ main = do
   xs <- words <$> getContents
   check1 "1-03 SUBENTRY : " "SUBENTRY" xs
   check1 "2-01 DOO : " "DOO" xs
-  anyChecks "2-02 use SWITCH possibillity :  " [("ENDIF" `elem`) , ("ENDDSTBL" `elem`)] xs
+  --anyChecks "2-02 use SWITCH possibillity :  " [("ENDIF" `elem`) , ("ENDDSTBL" `elem`)] xs
   check1 "2-04 SUBTURN : " "SUBTURN" xs
   check1 "2-07 FIRST : " "ENDFIRST"  xs
  -- print $ any $ map ("\AC" `isPrefixOf`) xs
@@ -13,7 +13,7 @@ main = do
   check1 "2-13 ACCALEND : " "ACCALEND"  xs
   check1 "2-14 ACCAPLWK : " "ACCAPLWK"  xs
   check1 "2-15 ACCDELETE : " "ACDELETE" xs
-  andChecks "2-17 EKLGET&KOZA= : " [("EKLGET" `elem`), ("KOZA=" `elem`)] xs
+  andChecks "2-17 EKLGET&KOZA= : " ["EKLGET","KOZA=" ] xs
   check1 "2-20 PUT : " "PUT"  xs
   check1 "2-22 DBIO : "  "DBIO" xs
   check1 "2-27 WTO : " "WTO"  xs
@@ -23,7 +23,7 @@ main = do
   --checks "4-05 boundary : " ((||) <$> ("DC H" `elem`) <*> ("DC F" `elem`) <*> ("DS H" `elem`) <*> ("DS F" `elem`)) xs
   check1 "B-2-01 GET : " "GET" xs
   
-  anyChecks "B-2-05,6 OPEN&CLOSE : " [("OPEN" `elem`) , ("CLOSE" `elem`)] xs
+  --anyChecks "B-2-05,6 OPEN&CLOSE : " [("OPEN" `elem`) , ("CLOSE" `elem`)] xs
   check1 "6-01 ORG : " "ORG" xs
 
 
@@ -32,15 +32,15 @@ check1 notion keyword xs =
     if keyword `elem` xs 
         then putStrLn notion
         else putStr ""
-
+{-- 
 anyChecks :: String -> [String -> Bool] -> [String] -> IO()
 anyChecks notion cond xs =
     if any cond xs
         then putStrLn notion
         else putStr ""
-
+--}        
 andChecks :: String -> [String -> Bool] -> [String] -> IO()
-andChecks notion cond xs =
-    if and cond xs
-        then putStrLn notion
-        else putStr ""
+andChecks notion [] xs = putStrLn notion
+andChecks notion (c:cs) xs
+  | c xs = andChecks notion cs xs
+  | otherwise = putStr ""
