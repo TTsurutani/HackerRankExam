@@ -1,47 +1,51 @@
--- 様々なパターンに対応できるよう判定関数とセットで渡せるように
--- 完全一致が必要なケースもある
 -- かつ、と、またはの複合条件に対応するには、どんな書式がベスト？
 
 import Data.List (isInfixOf)
 main :: IO ()
 main = do 
-  xs <- words <$> getContents
-  anyChecks "1-03 SUBENTRY : "                 ["SUBENTRY"] xs
-  anyChecks "2-01 DOO : "                      ["DOO"] xs
-  anyChecks "2-02 use SWITCH possibillity :  " ["ENDIF","ENDDSTBL"] xs
-  anyChecks "2-04,30 SUBTURN : "               ["SUBTURN"] xs
-  anyChecks "2-07 FIRST : "                    ["ENDFIRST"]  xs
-  anyChecks "2-08 MATCH : "                    ["ENDMATCH"]  xs
-  anyChecks "2-10 EDIT : "                     ["EDIT"] xs
-  anyChecks "2-12 BANK1 : "                    ["BANK1"]  xs
-  anyChecks "2-13 ACCALND : "                  ["\\ACCALND"]  xs
-  anyChecks "2-14 ACAPLWK : "                  ["\\ACAPLWK"]  xs
-  anyChecks "2-15 ACDELET : "                  ["\\ACDELET"] xs
-  andChecks "2-17 EKLGET&KOZA= : "             ["EKLGET","KOZA=" ] xs
-  anyChecks "2-20 PUT : "                      ["PUT"]  xs
-  anyChecks "2-22 DBIO : "                     ["DBIO"] xs
-  anyChecks "2-27 WTO : "                      ["WTO"]  xs
-  anyChecks "3-02 TRT : "                      ["\\ACSCHA","\\ACCTRTL","\\IGATR","\\IHCHAR","\\IGTRT"] xs 
-  anyChecks "4-01 WORKPOOL : "                 ["WORKPOOL"]  xs  
-  --anyChecks "4-05 boundary : "                 ["DC H","DC F","DS H","DS F"] xs
-  anyChecks "B-2-01 GET : "                    ["GET"] xs
-  anyChecks "B-2-05,6 OPEN&CLOSE : "           ["OPEN","CLOSE"] xs
-  anyChecks "6-01 ORG : "                      ["ORG"] xs
-
+  source <- words <$> getContents
+  anyChecks "1-03 SUBENTRY : "                 [("SUBENTRY",elem)] source
+  anyChecks "2-01 DOO : "                      [("DOO",elem)] source
+  anyChecks "2-02 use SWITCH possibillity :  " [("ENDIF",elem),("ENDDSTBL",elem)] source
+  anyChecks "2-04,30 SUBTURN : "               [("SUBTURN",elem)] source
+  anyChecks "2-07 FIRST : "                    [("ENDFIRST",elem)]  source
+  anyChecks "2-08 MATCH : "                    [("ENDMATCH",elem)]  source
+  anyChecks "2-10 EDIT : "                     [("EDIT",isIncluded)] source
+  anyChecks "2-12 BANK1 : "                    [("BANK1",isIncluded)]  source
+  anyChecks "2-13 ACCALND : "                  [("\\ACCALND",elem)]  source
+  anyChecks "2-14 ACAPLWK : "                  [("\\ACAPLWK",elem)]  source
+  anyChecks "2-15 ACDELET : "                  [("\\ACDELET",elem)] source
+  andChecks "2-17 EKLGET&KOZA= : "             [("\\EKLGET",elem),("KOZA=",isIncluded)] source
+  anyChecks "2-20 PUT : "                      [("PUT",elem)]  source
+  anyChecks "2-22 DBIO : "                     [("DBIO",isIncluded)] source
+  anyChecks "2-27 WTO : "                      [("WTO",isIncluded)]  source
+  anyChecks "3-02 TRT : "                      [("\\ACSCHA",elem),
+                                                ("\\ACCTRTL",elem),
+                                                ("\\IGATR",elem),
+                                                ("\\IHCHAR",elem),
+                                                ("\\IGTRT",elem)] source 
+  anyChecks "4-01 WORKPOOL : "                 [("WORKPOOL",elem)]  source  
+  anyChecks "4-05 boundary : "                 [("H",elem),("F",elem)] source
+  anyChecks "B-2-01 GET : "                    [("GET",elem)] source
+  anyChecks "B-2-05,6 OPEN&CLOSE : "           [("OPEN",elem),("CLOSE",elem)] source
+  anyChecks "6-01 ORG : "                      [("ORG",elem)] source
 
 type Notion = String
 type SourceCode = [String]
 type Keyword = String
-anyChecks :: Notion -> [Keyword] -> SourceCode -> IO()
-anyChecks _ [] _ = putStr ""
-anyChecks notion (c:cs) xs
-  | c `isIncluded` xs = putStrLn notion
-  | otherwise = anyChecks notion cs xs        
+type Func = Keyword -> SourceCode -> Bool
+type Condition = (Keyword,Func)
 
-andChecks :: Notion -> [Keyword] -> SourceCode -> IO()
+anyChecks :: Notion -> [Condition] -> SourceCode -> IO()
+anyChecks _ [] _ = putStr ""
+anyChecks notion ((key,func):cs) source
+  | func key source = putStrLn notion
+  | otherwise = anyChecks notion cs source        
+
+andChecks :: Notion -> [Condition] -> SourceCode -> IO()
 andChecks notion [] _ = putStrLn notion
-andChecks notion (c:cs) xs
-  | c `isIncluded` xs = andChecks notion cs xs
+andChecks notion ((key,func):cs) source
+  | func key source = andChecks notion cs source
   | otherwise = putStr ""
 
 -- |
