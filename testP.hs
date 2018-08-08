@@ -37,7 +37,7 @@ type Func = Keyword -> SourceCode -> Bool
 type Condition = (Keyword,Func)
 
 anyChecks :: Notion -> [Condition] -> SourceCode -> IO()
-anyChecks _ [] _ = putStr ""
+anyChecks _ [] _ = return ()
 anyChecks notion ((key,func):cs) source
   | func key source = putStrLn notion
   | otherwise = anyChecks notion cs source        
@@ -46,7 +46,7 @@ andChecks :: Notion -> [Condition] -> SourceCode -> IO()
 andChecks notion [] _ = putStrLn notion
 andChecks notion ((key,func):cs) source
   | func key source = andChecks notion cs source
-  | otherwise = putStr ""
+  | otherwise = return ()
 
 -- |
 -- keywordに部分一致する要素が含まれるかを判定する関数
