@@ -1,0 +1,988 @@
+         PGMSTART SAIL                                          
+****************************************************************
+*ÉvÉçÉOÉâÉÄñºÅ@     = HJFSDBIO                                
+*ÉvÉçÉOÉâÉÄñºèÃÅFêÊì˙ïtÉfÅ[É^ÅEÉxÅ[ÉXîƒópì¸èoóÕÉÇÉWÉÖ
+*ã@î\äTóvÅ@ÅF êÊì˙ïtÉfÅ[É^ÅEÉxÅ[ÉXÇÃì¸èoóÕÇçsÇ§Å@Å@Å@Å@
+*Å@Å@Å@Å@Å@Å@ Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@
+*Å@Å@Å@Å@Å@Å@ Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@
+*ã∆ñ±ãÊï™Å@Å@Å@     =Ç`ÇmÇrÇdÇq                             
+*çÏê¨ì˙Å@Å@Å@Å@     = 1993/02/22                              
+*íòçÏå†Å@Å@Å@Å@     =ÅiäîÅjñkäCìπëÒêBã‚çs                   
+****************************************************************
+*ÉåÉWÉXÉ^Å[ÇÃégópï˚ñ@Å@Å@                                     
+*Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@                                     
+*          ÅÉì¸óÕÅÑ        ÅÉèàóùÅÑ          ÅÉèoóÕÅÑ     
+* R0 :       ﬂ◊“-¿-  Å@Å@Å@Å@êßå‰ópÅ@            ﬂ◊“-¿-Å@
+* R1 :       ﬂ◊“-¿-  Å@Å@Å@Å@êßå‰ópÅ@            ﬂ◊“-¿-Å@
+* R2 :     Å@Å@Å@Å@         ‹-∏Å@Å@Å@Å@      Å@Å@Å@Å@     
+* R3 :     Å@Å@Å@Å@         ‹-∏Å@Å@Å@Å@      Å@Å@Å@Å@     
+* R4 :     Å@Å@Å@Å@         Õﬁ∞Ω•⁄ºﬁΩ¿∞                       
+* R5 :      (PL/I)Å@Å@Å@Å@  \#QEXA                            
+* R6 :     Å@Å@Å@Å@         \#QESB Å@Å@      Å@Å@Å@Å@     
+* R7 :     Å@Å@Å@Å@         \#QESA Å@Å@      Å@Å@Å@Å@     
+* R8 :     Å@Å@Å@Å@         \@QFSINF Å@      Å@Å@Å@Å@     
+* R9 :     Å@Å@Å@Å@         \@AAFINF Å@      Å@Å@Å@Å@     
+* R10:     Å@Å@Å@Å@         \@AAIBLK Å@      Å@Å@Å@Å@     
+* R11:     Å@Å@Å@Å@         Õﬁ-Ω•⁄ºﬁΩ¿-Å@Å@Å@Å@Å@Å@Å@Å@     
+* R12:      (PL/I)Å@Å@Å@Å@  (égópïsâ¬)        (PL/I)Å@Å@
+* R13:      ‹-∏•Ãﬂ-ŸÅ@Å@Å@Å@‹-∏•Ãﬂ-ŸÅ@Å@Å@Å@  ‹-∏•Ãﬂ-Ÿ
+* R14:     êßå‰ópÅ@        êßå‰ópÅ@          êßå‰ópÅ@     
+* R15:     êßå‰ópÅ@        êßå‰ópÅ@           ÿ¿-›•∫-ƒ
+****************************************************************
+*ÉvÉçÉOÉâÉÄèÓïÒÅ@Å@Å@Å@Å@Å@Å@                                 
+*  åæåÍ             =ÇΩÇ≠Ç¨ÇÒÉvÉåÉRÉìÉpÉCÉâÅ[               
+*   Ãﬂ€∏ﬁ◊—•ª≤ΩﬁÅ@Å@=    987 STEPS                            
+*  ëÆê´             =çƒì¸â¬î\Å@Å@Å@Å@Å@Å@Å@Å@               
+*   ”-ƒﬁÅ@Å@        = AMODE - 31ÅCRMODE - ANYÅ@Å@Å@Å@
+****************************************************************
+* ¥›ƒÿ-•Œﬂ≤›ƒÅ@Å@   = HJFSDBIO                                
+*  ∫-ŸÇ∑ÇÈÃﬂ€∏ﬁ◊—   = Ç»Å@Çµ Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@
+*Å@Å@                          Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@
+*òAånï“èWå„“› ﬁ-ñº= HJFLNK01                                
+****************************************************************
+*ì¸óÕèÓïÒÅ@Å@       =  ﬂ◊“∞¿∞àÊ                             
+*Å@Å@Å@Å@Å@Å@                                                 
+* R1-->+-------------+                                          
+*      |P. ﬂ◊“∞¿∞•ÿΩƒ|-->+--------------+                       
+*      +-------------+   |ÿªﬁ∞Ãﬁ        |                       
+*                        +--------------+                       
+*                        |P. ﬂ◊“∞¿∞     |--+                    
+*                        +--------------+  |                    
+*      +-----------------------------------+                    
+*      |                                                        
+*      +----+--------------+---+------------------------+       
+*      |OFF | LABEL        |MOD| CONTENTS               |       
+*      +----+--------------+---+------------------------+       
+*      |'00'| QFS@CONST    |CL8| ∫›Ω¿›ƒ'HJFSDBIO'       |       
+*      +----+--------------+---+------------------------+       
+*      |'08'| QFS@CALLER   |CL8| ÷Àﬁ¿ﬁº ”ºﬁ≠∞Ÿ “≤       |       
+*      +----+--------------+---+------------------------+       
+*      |'10'| QFS@TYPE     |CL2| ¿≤Ãﬂ                   |       
+*      +----+--------------+---+------------------------+       
+*      |'12'| QFS@PAYBONO  |CL4| √› ﬁ›                  |       
+*      +----+--------------+---+------------------------+       
+*      |'16'| QFS@PAYKMOK  |CL2| ∂”∏                    |       
+*      +----+--------------+---+------------------------+       
+*      |'18'| QFS@PAYKOZA  |PL5| ∫≥ªﬁ ﬁ›∫ﬁ≥             |       
+*      +----+--------------+---+------------------------+       
+*      |'1D'| QFS@UKEDATE  |CL4| ≥π¬πÀﬁ                 |       
+*      +----+--------------+---+------------------------+       
+*      |'21'| QFS@UKENO    |CL3| ≥π¬π ﬁ›∫ﬁ≥             |       
+*      +----+--------------+---+------------------------+       
+*      |'24'| QFS@PSEGM    |A  | æ∏ﬁ“›ƒ•±ƒﬁ⁄Ω           |       
+*      +----+--------------+---+------------------------+       
+*      |'28'| QFS@RC       |CL1| ÿ¿∞›•∫∞ƒﬁ              |       
+*      +----+--------------+---+------------------------+       
+*      |'29'| QFS@RSN      |CL3| ÿ∞Ωﬁ›•∫∞ƒﬁ             |       
+*      +----+--------------+---+------------------------+       
+*      |'2C'|              |XL4| ÷Àﬁ                    |       
+*      +----+--------------+---+------------------------+       
+*                                                               
+****************************************************************
+*èoóÕèÓïÒÅ@Å@       = æ∏ﬁ“›ƒ•±ƒﬁ⁄Ω(QFS@PSEGM)                 
+*Å@Å@Å@Å@Å@Å@                                                 
+*Å@Å@Å@Å@Å@Å@                                                 
+****************************************************************
+* …∞œŸ•ÿ¿∞›•∫∞ƒﬁÅ@Å@= QFS@RC : 'Y'                            
+*Å@Å@                 R15    : 0                              
+*                                                               
+* ¥◊∞•ÿ¿∞›•∫∞ƒﬁÅ@Å@ = QFS@RC : 'E' -óvãÅ¥◊∞                 
+*Å@Å@                        : 'N' -èàóù¥◊∞                 
+*Å@Å@                 R15    : 8   -óvãÅ¥◊∞                 
+*Å@Å@                        : 12  -èàóù¥◊∞                 
+*Å@Å@                                                         
+* ¥◊∞óùóR∫∞ƒﬁ       = QFS@RSN :                               
+*                         000 -ê≥èÌ                           
+*                         001 - ¿≤ÃﬂÇ™ñ≥éwíË                  
+*                         002 -ìXî‘Ç™ñ≥éwíË                   
+*                         003 -â»ñ⁄Ç™ñ≥éwíË                   
+*                         004 -å˚ç¿î‘çÜÇ™ñ≥éwíË               
+*                         005 -í[ññÇhÇcÇ™ê≥ÇµÇ≠Ç»Ç¢ 93/12/11  
+*                         100 -éÛïtì˙ÅCéÛïtî‘çÜÇ™ñ≥éwíË       
+*                         101 - æ∏ﬁ“›ƒ•±ƒﬁ⁄ΩÇ™ñ≥éwíË          
+*                         102 -éÛïtì˙ÅCéÛïtî‘çÜÇÃàÍï˚Ç™ñ≥éwíË 
+*                         200 - ¿≤ÃﬂÇ™ê≥ÇµÇ≠Ç»Ç¢              
+*                         201 -ìXî‘Ç™ê≥ÇµÇ≠Ç»Ç¢               
+*                         202 -â»ñ⁄Ç™ê≥ÇµÇ≠Ç»Ç¢               
+*                         204 -éÛïtì˙Ç™ê≥ÇµÇ≠Ç»Ç¢             
+*                         205 -éÛïtî‘çÜÇ™ê≥ÇµÇ≠Ç»Ç¢           
+*                         206 -ìXî‘ïsàÍív                     
+*                         207 -â»ñ⁄ïsàÍív                     
+*                         208 -å˚ç¿î‘çÜïsàÍív                 
+*                         209 -éÛïtì˙ïsàÍív                   
+*                         210 -éÛïtî‘çÜïsàÍív                 
+*                         300 -êÊì˙ït≤›√ﬁØ∏ΩDB I/O¥◊∞         
+*                         301 -êÊì˙ïtDB I/O¥◊∞                
+*                         302 -êÊì˙ïtDB(A) BFGETé∏îs        
+*                         303 -êÊì˙ïtDB(B) BFGETé∏îs        
+*                         304 -êÊì˙ït≤›√ﬁØ∏ΩDB BFGETé∏îs    
+*                         305 - \ACCALENDœ∏€•¥◊∞                
+*Å@Å@                                                         
+* ±Õﬁ›ƒﬁ•∫-ƒﬁÅ@Å@   = Ç»Å@Çµ                                
+*Å@Å@                                                         
+* “¬æ∞ºﬁ•∫∞ƒﬁÅ@Å@   = QF0004                                  
+*Å@Å@                                                         
+****************************************************************
+*égóp√ﬁ∞¿•Õﬁ∞Ω      = \#QESA   êÊì˙ïtä«óùÉZÉOÉÅÉìÉgÇcÇr
+*Å@Å@                 \#QESB   êÊì˙ïtñæç◊ÉZÉOÉÅÉìÉgÇcÇr
+*Å@Å@                 \#QEXA   êÊì˙ïtÉCÉìÉfÉbÉNÉXÇcÇaÅ@
+*Å@Å@                          Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@
+*égóp∫›ƒ€∞Ÿ•Ãﬁ€¬∏   = \@AAFINF ÇeÇhÇeÇnã§í ïîÅ@Å@Å@Å@Å@
+*Å@Å@                 \@QFSINF êÊì˙ïtÇcÇaì¸èoóÕÉÇÉWÉÖÅ[
+*Å@Å@                          Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@
+****************************************************************
+*ì‡ïîégópÉ}ÉNÉç     =                                         
+* Å@Å@Å@Å@Å@Å@Å@                                              
+*äOïîégópÉ}ÉNÉç     = \ACWTO   ÇvÇsÇnÉÅÉbÉZÅ[ÉWèoóÕÉ}ÉN
+*Å@Å@Å@Å@Å@Å@Å@       \ACBOTBL ìXèÓïÒÉeÅ[ÉuÉãÅEÉXÉLÉÉÉì
+*Å@Å@Å@Å@Å@Å@Å@       \ACNUMCK êîéöÉ`ÉFÉbÉNÅEÉ}ÉNÉçÅ@Å@
+*Å@Å@Å@Å@Å@Å@Å@       \ACCALND ÉJÉåÉìÉ_Å[åvéZÉ}ÉNÉçÅ@Å@
+*Å@Å@Å@Å@Å@Å@Å@       \ACREAD  ÇcÇaÉZÉOÉÅÉìÉgÇÃì«Ç›çûÇ›
+*Å@Å@Å@Å@Å@Å@Å@       \ACIOGET ÇcÇaÉZÉOÉÅÉìÉgë}ì¸àÊÇÃäm
+*Å@Å@Å@Å@Å@Å@Å@       \ACMOVEL í∑à⁄ìÆÉ}ÉNÉçÅ@Å@Å@Å@Å@Å@
+*Å@Å@Å@Å@Å@Å@Å@       \ACINSRT ÇcÇaÉZÉOÉÅÉìÉgÇÃë}ì¸Å@Å@
+*Å@Å@Å@Å@Å@Å@Å@       \ACWRITE ÇcÇaÉZÉOÉÅÉìÉgÇÃèëÇ´çûÇ›
+*Å@Å@Å@Å@Å@Å@Å@                Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@
+****************************************************************
+****************************************************************
+* Ãﬂ€∏ﬁ◊—çÏê¨é“Å@Å@ = 350240                                  
+****************************************************************
+*ç≈êVÇÃèCê≥ì˙       = 1999/06/28                              
+****************************************************************
+         EJECT                                                  
+****************************************************************
+* ‹∞∏•Ãﬂ∞Ÿ                                                      
+****************************************************************
+         WORKPOOL                                               
+                                                                
+WKR15    DS     F                           : ÿ¿∞›•∫∞ƒﬁ•æ∞ÃﬁàÊ
+                                                                
+WKPCUR   DS     A                           :åªégópóvëf±ƒﬁ⁄Ω  
+WKPNXT   DS     A                           :éüégópóvëf±ƒﬁ⁄Ω  
+WKPTOP   DS     A                           :óvëfƒØÃﬂ•±ƒﬁ⁄Ω   
+WKPEND   DS     A                           :óvëf¥›ƒﬁ•±ƒﬁ⁄Ω   
+WKPKEY   DS     A                           : ∑∞•±ƒﬁ⁄Ω          
+WKPSEGM  DS     A                           : æ∏ﬁ“›ƒ•±ƒﬁ⁄Ω      
+                                                                
+WKDBID   DS     CL3                         : √ﬁ∞¿•Õﬁ∞ΩID       
+WKSEGM   DS     CL1                         : æ∏ﬁ“›ƒID          
+WKIOMODE DS     CL2                         :ì¸èoóÕ”∞ƒﬁ       
+WKTYPE   DS     CL1                         :ì«éÊ¿≤Ãﬂ         
+WKTYPE2  DS     CL1                         :ì«éÊ¿≤Ãﬂ         
+                                                                
+WKDBKEY1 DS     0CL23                       : ∑∞•Ã®∞Ÿƒﬁ         
+WKBONO   DS     CL4                         :ìXî‘             
+WKKMOK   DS     CL2                         :â»ñ⁄             
+*931211WKKOZA   DS     CL9                         :å˚ç¿î‘çÜ  
+WKKOZA   DS     CL8                         :å˚ç¿î‘çÜ         
+WKTRMID  DS     CL1                         :í[ññÇhÇc 93/12/11
+WKQESADT DS     CL8                         :éÛïtì˙           
+                                                                
+WKDBKEY2 DS     CL3                         : DB∑∞(éÛïtî‘çÜ)  
+                                                                
+WKDATE   DS     PL3                         :éÛïtì˙ ﬂØ∏àÊ   
+WKUKDATE DS     PL5                         :éÛïtì˙           
+*970421WKZEN6   DS     PL5                         :ëOÇUâcã∆ì˙
+WKZEN7   DS     PL5                         : 970421ëOÇVâcã∆ì˙
+WKONDATE DS     0CL9                        : 940104            
+         DS     CL5                         : 940104            
+WKONMM   DS     CL2                         : 940104            
+         DS     CL2                         : 940104            
+                                                                
+WKMRC    DS     0CL4                        : œ∏€•ÿ¿∞›•∫∞ƒﬁ     
+WKRC     DS     CL1                         :   ÿ¿∞›•∫∞ƒﬁ       
+WKRSN    DS     CL3                         :   ÿ∞Ωﬁ›•∫∞ƒﬁ      
+                                                                
+WKSTAT   DS     CL2                         : DL/IΩ√∞¿Ω•∫∞ƒﬁ    
+                                                                
+WKQESFLG DS     CL1                         : QES-Aì«Ç›çûÇ›Ã◊∏
+                                                                
+         WORKEND                                                
+         EJECT                                                  
+****************************************************************
+* DSECT                                                         
+****************************************************************
+         \@AAFINF                           : FIFOã§í ïî      
+         \@QFSINF                           :  ﬂ◊“∞¿∞àÊ       
+*                                           :êÊì˙ïtDB(ä«óùæ∏
+         \#QESA                                                 
+*                                           :êÊì˙ïtDB(ñæç◊æ∏
+         \#QESB                                                 
+*                                           :êÊì˙ït≤›√ﬁØ∏ΩDB  
+         \#QEXA                                                 
+         EJECT                                                  
+****************************************************************
+*ëOèàóù/å„èàóù                                              
+****************************************************************
+HJFSDBIO PGMSAVE BR=R4,PARM=(((R8)))                            
+                                                                
+         USING  \@AAFINF,R9                 : FIFOã§í ïî      
+         USING  \@QFSINF,R8                 :  ﬂ◊“∞¿∞àÊ       
+         USING  \#QESA,R7                   :êÊì˙ïtDB(ä«óùæ∏
+         USING  \#QESB,R6                   :êÊì˙ïtDB(ñæç◊æ∏
+         USING  \#QEXA,R5                   :êÊì˙ït≤›√ﬁØ∏ΩDB  
+                                                                
+         R9     = AAI@PFIFO                 : FIFOã§í ïî±ƒﬁ⁄Ω 
+                                                                
+         QFS@RCFLD = 'Y000'                 : ÿ¿∞›•∫∞ƒﬁ         
+         WKDBID = BLANK                     : √ﬁ∞¿•Õﬁ∞ΩID ∏ÿ±   
+         WKSEGM = BLANK                     : æ∏ﬁ“›ƒID ∏ÿ±      
+         WKDBKEY1 = BLANK                   : ∑∞•∏ÿ±            
+         WKDBKEY2 = BLANK                   : ∑∞•∏ÿ±            
+         WKSTAT = BLANK                     : DL/IΩ√∞¿Ω•∫∞ƒﬁ•∏ÿ±
+         WKQESFLG = '0'                     : QES-Aì«Ç›çûÇ›Ã◊∏
+                                                                
+         SUBCALL PROCESS                    :èàóù             
+                                                                
+         WKR15  = R15                       : ÿ¿∞›•∫∞ƒﬁÇæ∞Ãﬁ 
+                                                                
+         IF     (QFS@RC = 'E'),OR,          : ¥◊∞?              
+                (QFS@RC = 'N')                                  
+             \ACWTO MSGCD='QF0004',      :êÊì˙ïtDBîƒópI/O”ºﬁ
+                    FILL=(WKDBID,WKSEGM,WKDBKEY1,WKDBKEY2,      
+                    QFS@CALLER,QFS@RCFLD,WKSTAT)                
+         ENDIF                                                  
+                                                                
+         PGMRETRN RR=WKR15                                      
+         EJECT                                                  
+****************************************************************
+*èàóù                                                         
+****************************************************************
+PROCESS  SUBENTRY                                               
+                                                                
+         IF     (QFS@TYPE = BLANK)          :ì¸èoóÕ¿≤ÃﬂÇ™
+             QFS@RCFLD = 'E001'             : ÿ¿∞›•∫∞ƒﬁ         
+             SUBTURN RR=8                                       
+         ENDIF                                                  
+                                                                
+         IF     (QFS@TYPE = 'RO')           :èáéüèàóùì«éÊ?    
+             SUBCALL TRMIDCHK               :í[ññÇhÇc¡™Ø∏ 93/1
+             SUBCALL KOZACHK                :éxï•éwíËå˚ç¿¡™Ø∏ 
+             IF     (QFS@UKEDATE ˝= BLANK),AND, :éÛïtì˙éwíË?  
+                    (QFS@UKENO ˝= BLANK)    :éÛïtî‘çÜéwíË?    
+                 SUBCALL UKENOCHK           :éÛïtî‘çÜ¡™Ø∏     
+             ELSEIF (QFS@UKEDATE ˝= BLANK),AND, :éÛïtì˙éwíË?  
+                    (QFS@UKENO = BLANK)     :éÛïtî‘çÜñ≥éwíË?  
+                 QFS@RCFLD = 'E102'         : ÿ¿∞›•∫∞ƒﬁ         
+                 SUBTURN RR=8                                   
+             ELSEIF (QFS@UKEDATE = BLANK),AND, :éÛïtì˙ñ≥éwíË? 
+                    (QFS@UKENO ˝= BLANK)    :éÛïtî‘çÜéwíË?    
+                 QFS@RCFLD = 'E102'         : ÿ¿∞›•∫∞ƒﬁ         
+                 SUBTURN RR=8                                   
+             ENDIF                                              
+             SUBCALL PROCRO                 :èáéüì«éÊÇÃèàóù   
+         ELSEIF (QFS@TYPE = 'RD')           :çXêV”∞ƒﬁì«éÊ?  
+             SUBCALL TRMIDCHK               :í[ññÇhÇc¡™Ø∏ 93/1
+             SUBCALL KOZACHK                :éxï•éwíËå˚ç¿¡™Ø∏ 
+             SUBCALL UKENOCHK               :éÛïtî‘çÜ¡™Ø∏     
+             SUBCALL PROCRD                 :çXêV”∞ƒﬁì«éÊ
+         ELSEIF (QFS@TYPE = 'WT')           :çXêV?            
+             IF     (QFS@PSEGM = AZERO)     : æ∏ﬁ“›ƒ•±ƒﬁ⁄Ωñ≥
+                 QFS@RCFLD = 'E101'                             
+                 SUBTURN RR=8                                   
+             ENDIF                                              
+             SUBCALL TRMIDCHK               :í[ññÇhÇc¡™Ø∏ 93/1
+             SUBCALL KOZACHK                :éxï•éwíËå˚ç¿¡™Ø∏ 
+             SUBCALL UKENOCHK               :éÛïtî‘çÜ¡™Ø∏     
+             SUBCALL PROCWT                 :çXêVÇÃèàóù       
+         ELSEIF (QFS@TYPE = 'IN')           :ë}ì¸?            
+             IF     (QFS@PSEGM = AZERO)     : æ∏ﬁ“›ƒ•±ƒﬁ⁄Ωñ≥
+                 QFS@RCFLD = 'E101'                             
+                 SUBTURN RR=8                                   
+             ENDIF                                              
+             SUBCALL TRMIDCHK               :í[ññÇhÇc¡™Ø∏ 93/1
+             SUBCALL KOZACHK                :éxï•éwíËå˚ç¿¡™Ø∏ 
+             SUBCALL UKENOCHK               :éÛïtî‘çÜ¡™Ø∏     
+             SUBCALL PROCIN                 :ë}ì¸ÇÃèàóù       
+         ELSEIF (QFS@TYPE = 'BF')           :ë}ì¸àÊÇÃämï€     
+             WKDBID = 'QES'                 : √ﬁ∞¿•Õﬁ∞ΩID       
+             WKSEGM = 'B'                   : æ∏ﬁ“›ƒID          
+             SUBCALL PROCBF                 :ë}ì¸àÊÇÃämï€ÇÃèà
+             QFS@PSEGM = AAI@DRSEGM         :ë}ì¸àÊ±ƒﬁ⁄Ω      
+         ELSE                                                   
+             QFS@RCFLD = 'E200'             : ÿ¿∞›•∫∞ƒﬁ         
+             SUBTURN RR=8                                       
+         ENDIF                                                  
+                                                                
+         QFS@RCFLD = 'Y000'                 : ÿ¿∞›•∫∞ƒﬁ         
+                                                                
+         SUBEXIT RR=0                                           
+         EJECT                                                  
+****************************************************************
+*í[ññÇhÇc¡™Ø∏                                   93/12/11 ADD  
+****************************************************************
+TRMIDCHK SUBENTRY                                               
+                                                                
+                                                                
+         IF     (QFS@TRMID ∑ C'J'),AND,     :  ﬂø∫›•Œ∞—’∞Ω
+                (QFS@TRMID ∑ C'K'),AND,                         
+                (QFS@TRMID ∑ C'R'),AND,     : ≤›¿∞»Øƒ 97/10/29  
+                (QFS@TRMID ∑ C'P')          : SPC     990705    
+             QFS@RCFLD = 'E005'             : ÿ¿∞›•∫∞ƒﬁ         
+             SUBTURN RR=8                                       
+         ENDIF                                                  
+                                                                
+         WKTRMID = QFS@TRMID                :í[ññÇhÇc         
+                                                                
+         SUBEXIT RR=0                                           
+         EJECT                                                  
+****************************************************************
+*å˚ç¿î‘çÜ¡™Ø∏                                                 
+****************************************************************
+KOZACHK  SUBENTRY                                               
+                                                                
+         IF     (QFS@PAYBONO = BLANK)     :éxï•éwíËå˚ç¿ìX
+             QFS@RCFLD = 'E002'             : ÿ¿∞›•∫∞ƒﬁ         
+             SUBTURN RR=8                                       
+         ENDIF                                                  
+                                                                
+         IF     (QFS@PAYKMOK = BLANK)     :éxï•éwíËå˚ç¿â»
+             QFS@RCFLD = 'E003'             : ÿ¿∞›•∫∞ƒﬁ         
+             SUBTURN RR=8                                       
+         ENDIF                                                  
+                                                                
+         IF     (QFS@PAYKOZA = 0)         :éxï•éwíËå˚ç¿î‘
+             QFS@RCFLD = 'E004'             : ÿ¿∞›•∫∞ƒﬁ         
+             SUBTURN RR=8                                       
+         ENDIF                                                  
+                                                                
+         \ACBOTBL BO=QFS@PAYBONO,KEYATTR=CL4                    
+                                                                
+         IF     (NOTFOUND)                                      
+             QFS@RCFLD = 'E201'             : ÿ¿∞›•∫∞ƒﬁ         
+             SUBTURN RR=8                                       
+         ENDIF                                                  
+                                                                
+         \ACNUMCK QFS@PAYKMOK                                   
+                                                                
+         IF     (R15 = 0)                   : ¥◊∞ ?             
+             QFS@RCFLD = 'E202'                                 
+             SUBTURN RR=8                                       
+         ENDIF                                                  
+                                                                
+         WKBONO = QFS@PAYBONO               :ìXî‘             
+         WKKMOK = QFS@PAYKMOK               :â»ñ⁄             
+         WKKOZA = QFS@PAYKOZA               :å˚ç¿î‘çÜ         
+                                                                
+         IF     (QFS@TYPE = 'IN'),OR,       :ë}ì¸óvãÅ?        
+                (QFS@TYPE = 'WT')           :çXêVóvãÅ?        
+             R6     = QFS@PSEGM             : æ∏ﬁ“›ƒ•±ƒﬁ⁄Ω      
+             IF     (QFS@PAYBONO ˝= QESB@PAYBONO) :ìXî‘ïsàÍív?
+                 QFS@RCFLD = 'E206'                             
+                 SUBTURN RR=8                                   
+             ENDIF                                              
+             IF     (QFS@PAYKMOK ˝= QESB@PAYKMOK) :â»ñ⁄ïsàÍív?
+                 QFS@RCFLD = 'E207'                             
+                 SUBTURN RR=8                                   
+             ENDIF                                              
+             IF     (WKKOZA ˝= QESB@PAYKOZA) :å˚ç¿ïsàÍív?     
+                 QFS@RCFLD = 'E208'                             
+                 SUBTURN RR=8                                   
+             ENDIF                                              
+         ENDIF                                                  
+                                                                
+         SUBEXIT                                                
+         EJECT                                                  
+****************************************************************
+*éÛïtî‘çÜ¡™Ø∏                                                 
+****************************************************************
+UKENOCHK SUBENTRY                                               
+                                                                
+         IF     (QFS@UKEDATE = BLANK)       :éÛïtì˙Ç™ñ≥éwíË?  
+             QFS@RCFLD = 'E100'                                 
+             SUBTURN RR=8                                       
+         ENDIF                                                  
+                                                                
+         IF     (QFS@UKENO = BLANK)         :éÛïtî‘çÜÇ™ñ≥éwíË?
+             QFS@RCFLD = 'E100'                                 
+             SUBTURN RR=8                                       
+         ENDIF                                                  
+                                                                
+         \ACNUMCK QFS@UKEDATE                                   
+                                                                
+         IF     (R15 = 0)                   : ¥◊∞ ?             
+             QFS@RCFLD = 'E204'             :éÛïtì˙Ç™ê≥ÇµÇ≠Ç»
+             SUBTURN RR=8                                       
+         ENDIF                                                  
+                                                                
+         WKDATE = QFS@UKEDATE               :éÛïtì˙ ﬂØ∏       
+         WKUKDATE = AAF@ONDATE              :ëÄçÏì˙           
+         NC     WKUKDATE,=X'FFFFF0000F'     :îNåé∏ÿ±          
+         WKUKDATE + WKDATE                  :éÛïtì˙(YYYYMMDD) 
+         WKONDATE = AAF@ONDATE              : 940104            
+         IF     (WKONMM  = 01),AND,         : 940104            
+                (QFS@UKEMM  = 12)           : 940104            
+             WKUKDATE -  10000              : 940104            
+         ENDIF                              : 940104            
+                                                                
+         \ACNUMCK QFS@UKENO                                     
+                                                                
+         IF     (R15 = 0)                   : ¥◊∞ ?             
+             QFS@RCFLD = 'E205'             :éÛïtî‘çÜÇ™ê≥Çµ
+             SUBTURN RR=8                                       
+         ENDIF                                                  
+                                                                
+         IF     (QFS@TYPE = 'IN'),OR,       :ë}ì¸óvãÅ?        
+                (QFS@TYPE = 'WT')           :çXêVóvãÅ?        
+             R6     = QFS@PSEGM             : æ∏ﬁ“›ƒ•±ƒﬁ⁄Ω      
+             IF     (QFS@UKEDATE ˝= QESB@UKEDATE) :éÛïtì˙ïsàÍ
+                 QFS@RCFLD = 'E209'                             
+                 SUBTURN RR=8                                   
+             ENDIF                                              
+             IF     (QFS@UKENO ˝= QESB@UKENO) :éÛïtî‘çÜïsàÍív?
+                 QFS@RCFLD = 'E210'                             
+                 SUBTURN RR=8                                   
+             ENDIF                                              
+         ENDIF                                                  
+                                                                
+         SUBEXIT                                                
+         EJECT                                                  
+****************************************************************
+*èáéüì«éÊÇÃèàóù                                               
+****************************************************************
+PROCRO   SUBENTRY                                               
+                                                                
+         WKIOMODE = 'G1'                    :ì¸èoóÕ”∞ƒﬁ       
+         SUBCALL READQEXA                 :êÊì˙ït≤›√ﬁØ∏Ω
+                                                                
+         IF     (WKRC = 'W')                : NOTFOUND ?        
+             QFS@RCFLD = 'W000'                                 
+             SUBTURN RR=4                                       
+         ENDIF                                                  
+                                                                
+         IF     (QFS@UKEDATE = BLANK)       : 1ST ?             
+             SUBCALL PROCRO1                :äYìñå˚ç¿ÇÃ1S
+         ELSE                                                   
+             SUBCALL PROCRO2                :éwíËÇ≥ÇÍÇΩéüÇì«
+         ENDIF                                                  
+                                                                
+         SUBEXIT                                                
+         EJECT                                                  
+****************************************************************
+*äYìñå˚ç¿ÇÃ1STÇì«Çﬁ                                        
+****************************************************************
+PROCRO1  SUBENTRY                                               
+                                                                
+*970421  \ACCALND TYPE='DF05',              :ëOÇUâcã∆ì˙ÇÃåvéZ 
+*970421           FROM=AAF@ONDATE,TO='6',                       
+*970421           OPT=BEFORE,HOLIDAY=BANK1,ANS=WKZEN6           
+         \ACCALND TYPE='DF05',              :ëOÇVâcã∆ì˙ÇÃåvéZ 
+                  FROM=AAF@ONDATE,TO='7',                       
+                  OPT=BEFORE,HOLIDAY=BANK1,ANS=WKZEN7           
+                                                                
+         IF     (ERROR)                                         
+             QFS@RCFLD = 'N305'                                 
+             SUBTURN RR=12                                      
+         ENDIF                                                  
+                                                                
+         R5     = WKPCUR                    :åªégópóvëf±ƒﬁ⁄Ω  
+*970421  IF     (QEXA@UKEDATE < WKZEN6)     :ëOÇVà»ëO?        
+         IF     (QEXA@UKEDATE < WKZEN7)     :ëOÇWà»ëO?        
+             QFS@RCFLD = 'W000'             : NOTFOUND          
+             SUBTURN RR=4                                       
+         ENDIF                                                  
+                                                                
+         DOO                                                    
+*970421  DOEXIT (QEXA@UKEDATE < WKZEN6)     :ëOÇVà»ëO?        
+         DOEXIT (QEXA@UKEDATE < WKZEN7)     :ëOÇWà»ëO?        
+             WKUKDATE = QEXA@UKEDATE        :éÛïtì˙           
+             R5     - Y(QEXA@ELMLTH)        :ëOóvëf±ƒﬁ⁄Ω      
+             IF     (R5 < WKPTOP)           :óvëfƒØÃﬂ?        
+                 R5     = WKPEND            :óvëf¥›ƒﬁ         
+             ENDIF                                              
+         ENDDO                                                  
+                                                                
+         SUBCALL READQESA                   :êÊì˙ïtDB(A)
+                                                                
+         WKTYPE2 = 'N'                      :ì«Ç›éÊÇË¿≤Ãﬂ     
+         WKPKEY = 0                         : ∑∞•±ƒﬁ⁄Ω          
+         SUBCALL READQESB                   :êÊì˙ïtDB(B)
+         IF     (WKRC = 'W')                : 1STÇ™Ç»Ç¢?      
+             WKSTAT = AAI@DRSTAT            : DL/IΩ√∞¿Ω•∫∞ƒﬁ    
+             QFS@RCFLD = 'N301'                                 
+             SUBTURN RR=12                                      
+         ENDIF                                                  
+         QFS@UKEDATE = QESB@UKEDATE         :éÛïtì˙           
+         QFS@UKENO = QESB@UKENO             :éÛïtî‘çÜ         
+                                                                
+         SUBEXIT                                                
+         EJECT                                                  
+****************************************************************
+*éwíËÇ≥ÇÍÇΩéüÇÃæ∏ﬁ“›ƒì«Çﬁ                                   
+****************************************************************
+PROCRO2  SUBENTRY                                               
+                                                                
+         WKTYPE2 = 'U'                      :ì«Ç›éÊÇË¿≤Ãﬂ     
+         WKPKEY = A(QFS@UKENO)              : ∑∞•±ƒﬁ⁄Ω          
+         SUBCALL READQESB            :êÊì˙ïtDBì«Ç›çûÇ›(Œﬂºﬁº
+         IF     (WKRC = 'W')                :ëOâÒì«ÇﬂÇΩÇ‡ÇÃ
+             WKSTAT = AAI@DRSTAT            : DL/IΩ√∞¿Ω•∫∞ƒﬁ    
+             QFS@RCFLD = 'N301'                                 
+             SUBTURN RR=12                                      
+         ENDIF                                                  
+                                                                
+         WKTYPE2 = 'N'                      :ì«Ç›éÊÇË¿≤Ãﬂ     
+         WKPKEY = 0                         : ∑∞•±ƒﬁ⁄Ω          
+         SUBCALL READQESB                   :êÊì˙ïtDB(B)
+                                                                
+         IF     (WKRC = 'Y')                : OK ?              
+             QFS@UKEDATE = QESB@UKEDATE     :éÛïtì˙           
+             QFS@UKENO = QESB@UKENO         :éÛïtî‘çÜ         
+         ELSE                               : NOTFOUND          
+             R3     = QEXA@ELMCNT           :óvëfêî           
+             R5     = WKPTOP                :åªóvëfƒØÃﬂ       
+             BLOCK                                              
+                 DOO    R3                                      
+                     IF     (WKUKDATE = QEXA@UKEDATE) : FOUND ? 
+                         IF     (R5 = WKPEND) :ç≈èIóvëf?      
+                             R5     = WKPTOP                    
+                         ELSE                                   
+                             R5     + Y(QEXA@ELMLTH) :éüóvëf±ƒ
+                         ENDIF                                  
+                         WKUKDATE = QEXA@UKEDATE                
+                         BLKEXIT                                
+                     ENDIF                                      
+                     R5     + Y(QEXA@ELMLTH) :éüóvëf±ƒﬁ⁄Ω     
+                 ENDDO                                          
+             ENDBLOCK                                           
+             IF     (WKUKDATE > 0)          : NOT END ?         
+                 SUBCALL READQESA           :êÊì˙ïtDB(A)
+                 WKPKEY = 0                 :ì«Ç›çûÇ›¿≤Ãﬂ     
+                 SUBCALL READQESB           :êÊì˙ïtDB(B)
+                 IF     (WKRC = 'W')        : 1STÇ™Ç»Ç¢?      
+                     WKSTAT = AAI@DRSTAT    : DL/IΩ√∞¿Ω•∫∞ƒﬁ    
+                     QFS@RCFLD = 'N301'                         
+                     SUBTURN RR=12                              
+                 ENDIF                                          
+                 QFS@UKEDATE = QESB@UKEDATE :éÛïtì˙           
+                 QFS@UKENO = QESB@UKENO     :éÛïtî‘çÜ         
+             ELSE                                               
+                 QFS@RCFLD = 'W000'         : NOTFOUND          
+                 SUBTURN RR=4                                   
+             ENDIF                                              
+         ENDIF                                                  
+                                                                
+         SUBEXIT                                                
+         EJECT                                                  
+****************************************************************
+*çXêV”∞ƒﬁì«éÊÇÃèàóù                                         
+****************************************************************
+PROCRD   SUBENTRY                                               
+                                                                
+         WKIOMODE = 'H1'                    :ì¸èoóÕ”∞ƒﬁ       
+                                                                
+         SUBCALL READQEXA                 :êÊì˙ït≤›√ﬁØ∏Ω
+                                                                
+         IF     (WKRC = 'W')                : NOTFOUND ?        
+             QFS@RCFLD = 'W000'                                 
+             SUBTURN RR=4                                       
+         ENDIF                                                  
+                                                                
+         R3     = QEXA@ELMCNT               :óvëfêî           
+         R5     = WKPTOP                    :åªóvëfƒØÃﬂ       
+         BLOCK                                                  
+             DOO    R3                                          
+                 IF     (WKUKDATE = QEXA@UKEDATE) : FOUND ?     
+                     BLKEXIT                                    
+                 ENDIF                                          
+                 R5     + Y(QEXA@ELMLTH)    :éüóvëf±ƒﬁ⁄Ω      
+             ENDDO                                              
+             QFS@RCFLD = 'W000'             : NOTFOUND          
+             SUBTURN RR=4                                       
+         ENDBLOCK                                               
+                                                                
+         WKTYPE2 = 'U'                                          
+         WKPKEY = A(QFS@UKENO)              : ∑∞•±ƒﬁ⁄Ω          
+                                                                
+         SUBCALL READQESB                   :êÊì˙ïtDBÇÃì«
+                                                                
+         IF     (WKRC = 'W')                : NOTFOUND          
+             QFS@RCFLD = 'W000'                                 
+             SUBTURN RR=4                                       
+         ENDIF                                                  
+                                                                
+         SUBEXIT                                                
+         EJECT                                                  
+****************************************************************
+*çXêVóvãÅÇÃèàóù                                               
+****************************************************************
+PROCWT   SUBENTRY                                               
+                                                                
+         WKDBID = 'QES'                     : √ﬁ∞¿•Õﬁ∞ΩID       
+         WKSEGM = 'B'                       : æ∏ﬁ“›ƒID          
+         WKPSEGM = QFS@PSEGM                : æ∏ﬁ“›ƒ•±ƒﬁ⁄Ω      
+                                                                
+         WKQESADT = WKUKDATE                :éÛïtì˙           
+         WKDBKEY2 = QFS@UKENO               :éÛïtî‘çÜ         
+                                                                
+         SUBCALL DBWRITE                    : DBèëÇ´çûÇ›      
+                                                                
+         SUBEXIT                                                
+         EJECT                                                  
+****************************************************************
+*ë}ì¸óvãÅÇÃèàóù                                               
+****************************************************************
+PROCIN   SUBENTRY                                               
+                                                                
+         WKIOMODE = 'H1'                    :ì¸èoóÕ”∞ƒﬁ       
+         SUBCALL READQEXA               :êÊì˙ït≤›√ﬁØ∏ΩD
+                                                                
+         IF     (WKRC = 'W')                : NOTFOUND ?        
+             SUBCALL PROCIN1                : ≤›√ﬁØ∏ΩDBÇ»Çµ   
+         ELSE                                                   
+             SUBCALL PROCIN2                : ≤›√ﬁØ∏ΩDBÇ†ÇË   
+         ENDIF                                                  
+                                                                
+         SUBEXIT                                                
+         EJECT                                                  
+****************************************************************
+*ë}ì¸óvãÅÇÃèàóù(êÊì˙ït≤›√ﬁØ∏ΩDBÇ™Ç»Ç¢Ç∆Ç´Åj               
+****************************************************************
+PROCIN1  SUBENTRY                                               
+                                                                
+         SUBCALL PROCBF                     :ë}ì¸àÊÇÃämï€     
+                                                                
+         R5     = AAI@DRSEGM                :ë}ì¸àÊ±ƒﬁ⁄Ω      
+         WKPSEGM = R5                                           
+                                                                
+         QEXA@PAYBONO = WKBONO              :ìXî‘             
+         QEXA@PAYKMOK = WKKMOK              :â»ñ⁄             
+         QEXA@PAYKOZA = WKKOZA              :å˚ç¿î‘çÜ         
+         QEXA@TRMID = WKTRMID               :í[ññÇhÇc 93/12/11
+         QEXA@NEXTOFF = Y(QEXA@ELMLTH)      :éüóvëfµÃæØƒ      
+                                                                
+         R5     = A(QEXA@ELMTOP)            :óvëfêÊì™±ƒﬁ⁄Ω    
+         QEXA@UKEDATE = WKUKDATE            :éÛïtì˙           
+                                                                
+         SUBCALL DBINSRT                    : DBæ∏ﬁ“›ƒÇÃë}ì¸  
+         SUBCALL ISRTQESA                   :êÊì˙ïtDB(A)ÇÃ
+         SUBCALL ISRTQESB                   :êÊì˙ïtDB(B)ÇÃ
+                                                                
+         SUBEXIT                                                
+         EJECT                                                  
+****************************************************************
+*ë}ì¸óvãÅÇÃèàóù(êÊì˙ït≤›√ﬁØ∏ΩDBÇ™Ç†ÇÈÇ∆Ç´Åj               
+****************************************************************
+PROCIN2  SUBENTRY                                               
+                                                                
+         BLOCK                                                  
+             WKPSEGM = R5                   : æ∏ﬁ“›ƒ•±ƒﬁ⁄Ω      
+             R3     = QEXA@ELMCNT           :óvëfêî           
+             R5     = WKPTOP                :êÊì™±ƒﬁ⁄Ω        
+                                                                
+             DOO    R3                                          
+                 IF     (QEXA@UKEDATE = WKUKDATE) : FOUND ?     
+                     BLKEXIT                                    
+                 ENDIF                                          
+                 R5     + Y(QEXA@ELMLTH)    :éüóvëf±ƒﬁ⁄Ω      
+             ENDDO                                              
+                                                                
+             R5     = WKPNXT                                    
+             QEXA@UKEDATE = WKUKDATE        :éÛïtì˙æØƒ        
+                                                                
+             R5     = WKPSEGM               : æ∏ﬁ“›ƒ•±ƒﬁ⁄Ω      
+             IF     (WKPNXT = WKPEND)       :ç≈èIóvëf?        
+                 QEXA@NEXTOFF = 0           :éüégópóvëfµÃæØƒ  
+             ELSE                                               
+                 QEXA@NEXTOFF + Y(QEXA@ELMLTH) :éüégópóvëfµÃæØ
+             ENDIF                                              
+             R5     = QEXA@NEXTOFF          :éüóvëf±ƒﬁ⁄Ω      
+                    + WKPTOP                                    
+             QEXA@UKEDATE = 0               :éüóvëf∏ÿ±        
+                                                                
+             SUBCALL DBWRITE                : DBèëÇ´çûÇ›      
+             SUBCALL ISRTQESA               :êÊì˙ïtDB(A)ÇÃ
+             SUBCALL ISRTQESB               :êÊì˙ïtDB(B)ÇÃ
+                                                                
+             SUBEXIT                                            
+                                                                
+         ENDBLOCK                                               
+                                                                
+         SUBCALL READQESA                   :êÊì˙ïtDB(A
+                                                                
+         SUBCALL ISRTQESB                   :êÊì˙ïtDB(B)ÇÃ
+                                                                
+         SUBEXIT                                                
+         EJECT                                                  
+****************************************************************
+*êÊì˙ïtDB(A)ÇÃì«Ç›çûÇ›                                      
+****************************************************************
+READQESA SUBENTRY                                               
+                                                                
+         WKDBID = 'QES'                     : √ﬁ∞¿•Õﬁ∞ΩID       
+         WKSEGM = 'A'                       : æ∏ﬁ“›ƒID          
+         WKTYPE = 'U'                       :ì«Ç›éÊÇË¿≤Ãﬂ     
+         WKQESADT = WKUKDATE                :éÛïtì˙±› ﬂØ∏     
+         R6     = A(WKDBKEY1)               : ∑∞•Ã®∞Ÿƒﬁ•±ƒﬁ⁄Ω   
+                                                                
+         SUBCALL DBREAD                     : DBì«Ç›çûÇ›      
+                                                                
+         IF     (ERROR)                     : NOTFOUND ?        
+             WKSTAT = AAI@DRSTAT            : DL/IΩ√∞¿Ω•∫∞ƒﬁ    
+             QFS@RCFLD = 'N301'             : I/O¥◊∞            
+             SUBTURN RR=12                                      
+         ENDIF                                                  
+                                                                
+         R7     = AAI@DRSEGM                : æ∏ﬁ“›ƒ•±ƒﬁ⁄Ω      
+                                                                
+         WKQESFLG = '1'                     : QES-Aì«Ç›çûÇ›Ã◊∏
+                                                                
+         SUBEXIT                                                
+         EJECT                                                  
+****************************************************************
+*êÊì˙ïtDB(B)ÇÃì«Ç›çûÇ›                                      
+****************************************************************
+READQESB SUBENTRY                                               
+                                                                
+         WKQESADT = WKUKDATE                :éÛïtì˙±› ﬂØ∏     
+                                                                
+         WKDBID = 'QES'                     : √ﬁ∞¿•Õﬁ∞ΩID       
+         WKSEGM = 'B'                       : æ∏ﬁ“›ƒID          
+                                                                
+         R6     = WKPKEY                                        
+         IF     (R6 > AZERO)                :éwíËÇ†ÇË?        
+             MVC    WKDBKEY2,0(R6)          : ∑∞ï€ë∂          
+         ELSE                                                   
+             WKDBKEY2 = BLANK                                   
+         ENDIF                                                  
+                                                                
+         \ACREAD DB=WKDBID,SEGM=WKSEGM,MODE=WKIOMODE,TYPE=WKTYPE
+                 KEY=(WKDBKEY1,(R6))                            
+                                                                
+         IF     (R15 > 4)                   : ¥◊∞ ?             
+             WKSTAT = AAI@DRSTAT            : DL/IΩ√∞¿Ω•∫∞ƒﬁ    
+             QFS@RCFLD = 'N301'                                 
+             SUBTURN RR=12                                      
+         ENDIF                                                  
+                                                                
+         WKMRC  = WK@MRC                    : ÿ¿∞›•∫∞ƒﬁ         
+                                                                
+         R6     = AAI@DRSEGM                : æ∏ﬁ“›ƒ•±ƒﬁ⁄Ω      
+         QFS@PSEGM = R6                                         
+                                                                
+         SUBEXIT                                                
+         EJECT                                                  
+****************************************************************
+*êÊì˙ït≤›√ﬁØ∏ΩDBÇÃì«Ç›çûÇ›                                  
+****************************************************************
+READQEXA SUBENTRY                                               
+                                                                
+         WKDBID = 'QEX'                     : √ﬁ∞¿•Õﬁ∞ΩID       
+         WKSEGM = 'A'                       : æ∏ﬁ“›ƒID          
+         WKTYPE = 'U'                       :ì«éÊ¿≤Ãﬂ         
+         R6     = A(WKDBKEY1)               : ∑∞•Ã®∞ƒﬁ•±ƒﬁ⁄Ω    
+                                                                
+         SUBCALL DBREAD                     : DBì«Ç›çûÇ›      
+                                                                
+         IF     (NORMAL)                                        
+             R5     = AAI@DRSEGM            : æ∏ﬁ“›ƒ•±ƒﬁ⁄Ω      
+             WKPTOP = A(QEXA@ELMTOP)        :óvëfƒØÃﬂ         
+             WKPEND = QEXA@ELMCNT           :óvëf¥›ƒﬁ         
+                    - 1                                         
+                    * Y(QEXA@ELMLTH)                            
+                    + A(QEXA@ELMTOP)                            
+             R2     = QEXA@NEXTOFF          :éüégópµÃæØƒ      
+             WKPNXT = R2                    :éüégópóvëf±ƒﬁ⁄Ω  
+                    + WKPTOP                                    
+             IF     (R2 = 0)                :éüóvëfÇ™êÊì™óvëf?
+                 WKPCUR = WKPEND            :åªóvëfÇÕç≈èIóvëf 
+             ELSE                                               
+                 R2     - Y(QEXA@ELMLTH)    :åªégópóvëfµÃæØƒ  
+                 WKPCUR = R2                :åªóvëf±ƒﬁ⁄Ω      
+                        + WKPTOP                                
+             ENDIF                                              
+         ENDIF                                                  
+                                                                
+         SUBEXIT                                                
+         EJECT                                                  
+****************************************************************
+*êÊì˙ïtDB(A)ÇÃë}ì¸                                          
+****************************************************************
+ISRTQESA SUBENTRY                                               
+                                                                
+         WKDBID = 'QES'                     : √ﬁ∞¿•Õﬁ∞ΩID       
+         WKSEGM = 'A'                       : æ∏ﬁ“›ƒID          
+                                                                
+         SUBCALL PROCBF                     :ë}ì¸àÊÇÃämï€     
+                                                                
+         R7     = AAI@DRSEGM                :ë}ì¸àÊ±ƒﬁ⁄Ω      
+         WKPSEGM = R7                                           
+                                                                
+         QESA@PAYBONO = WKBONO              :ìXî‘             
+         QESA@PAYKMOK = WKKMOK              :â»ñ⁄             
+         QESA@PAYKOZA = WKKOZA              :å˚ç¿î‘çÜ         
+         QESA@TRMID = WKTRMID               :í[ññÇhÇc 93/12/11
+         QESA@UKEDATE = WKUKDATE            :éÛïtì˙           
+         QESA@DTLCNT = 1                    :ñæç◊ñáêî         
+                                                                
+         WKDBKEY1 = QESA@KEY                : ∑∞ï€ë∂          
+                                                                
+         SUBCALL DBINSRT                    : DBæ∏ﬁ“›ƒÇÃë}ì¸  
+                                                                
+         SUBEXIT                                                
+         EJECT                                                  
+****************************************************************
+*êÊì˙ïtDB(B)ÇÃë}ì¸êßå‰                                      
+****************************************************************
+ISRTQESB SUBENTRY                                               
+                                                                
+         WKPSEGM = QFS@PSEGM                : æ∏ﬁ“›ƒ•±ƒﬁ⁄Ω      
+         WKSEGM = 'B'                       : æ∏ﬁ“›ƒID          
+                                                                
+         WKDBKEY2 = QFS@UKENO               : ∑∞ï€ë∂          
+                                                                
+         IF     (QFS@UKENO = '000')         : Ãﬂ⁄¡™Ø∏èÓïÒï€ë∂?
+             R6     = A(WKDBKEY2)           : ∑∞•±ƒﬁ⁄Ω          
+             SUBCALL DBREAD                 : DBæ∏ﬁ“›ƒì«Ç›çûÇ›
+             IF     (WK@RC = 'Y')           : …∞œŸ ?            
+                 SUBCALL DBWRITE            : DBæ∏ﬁ“›ƒèëÇ´çûÇ›
+             ELSE                           : NOTFOUND          
+                 SUBCALL ISRTQES            : DBæ∏ﬁ“›ƒÇÃë}ì¸  
+             ENDIF                                              
+         ELSE                                                   
+             SUBCALL ISRTQES                : DBæ∏ﬁ“›ƒÇÃë}ì¸  
+         ENDIF                                                  
+                                                                
+         SUBEXIT                                                
+         EJECT                                                  
+****************************************************************
+*êÊì˙ïtDB(B)ÇÃë}ì¸                                          
+****************************************************************
+ISRTQES  SUBENTRY                                               
+                                                                
+         SUBCALL DBINSRT                    : DBæ∏ﬁ“›ƒÇÃë}ì¸  
+                                                                
+         IF     (WKQESFLG = '1')            : QES-Aì«Ç›çûÇ›çœ?
+             QESA@DTLCNT + 1                :ñæç◊ñáêî         
+             WKPSEGM = R7                   : æ∏ﬁ“›ƒ•±ƒﬁ⁄Ω      
+             WKSEGM = 'A'                   : æ∏ﬁ“›ƒID          
+             SUBCALL DBWRITE                : DBèëÇ´çûÇ›      
+         ENDIF                                                  
+                                                                
+         SUBEXIT                                                
+         EJECT                                                  
+****************************************************************
+*ë}ì¸àÊÇÃämï€                                                 
+****************************************************************
+PROCBF   SUBENTRY                                               
+                                                                
+         \ACIOGET DB=WKDBID,SEGM=WKSEGM                         
+                                                                
+         IF     (ERROR)                                         
+             WKSTAT = AAI@DRSTAT            : DL/IΩ√∞¿Ω•∫∞ƒﬁ    
+             QFS@RC = 'N'                   : ÿ¿∞›•∫∞ƒﬁ         
+             IF     (WKDBID = 'QES')        :êÊì˙ïtDB ?       
+                 IF     (WKSEGM = 'A')      :êÊì˙ïtä«óùæ∏ﬁ“›ƒ 
+                     QFS@RSN = '302'        :óùóR∫∞ƒﬁ         
+                 ELSE                       :ñæç◊æ∏ﬁ“›ƒ       
+                     QFS@RSN = '303'        :óùóR∫∞ƒﬁ         
+                 ENDIF                                          
+             ELSE                           : ≤›√ﬁØ∏ΩDB         
+                 QFS@RSN = '304'            :óùóR∫∞ƒﬁ         
+             ENDIF                                              
+             SUBTURN RR=12                                      
+         ENDIF                                                  
+                                                                
+         IF     (WKDBID = 'QES')            :êÊì˙ïtDB ?       
+             IF     (WKSEGM = 'A')          :êÊì˙ïtä«óùæ∏ﬁ“›ƒ 
+                 R2     = CNPQESA       :êÊì˙ïtä«óùæ∏ﬁ“›ƒèâ
+             ELSE                           :ñæç◊æ∏ﬁ“›ƒ       
+                 R2     = CNPQESB       :êÊì˙ïtñæç◊æ∏ﬁ“›ƒèâ
+             ENDIF                                              
+         ELSE                               : ≤›√ﬁØ∏ΩDB         
+             R2     = CNPQEXA       :êÊì˙ït≤›√ﬁØ∏Ωèâä˙ ﬂ¿∞› 
+         ENDIF                                                  
+                                                                
+         R3     = AAI@DRSEGM                : æ∏ﬁ“›ƒë}ì¸àÊ±ƒﬁ⁄
+         LH     R5,0(R2)                    : æ∏ﬁ“›ƒí∑        
+                                                                
+         \ACMOVEL (R3),(R2),((R5))          :èâä˙âª           
+                                                                
+         SUBEXIT                                                
+         EJECT                                                  
+****************************************************************
+* DBÇÃì«Ç›çûÇ›                                                
+****************************************************************
+DBREAD   SUBENTRY                                               
+                                                                
+         \ACREAD DB=WKDBID,SEGM=WKSEGM,                         
+                 MODE=WKIOMODE,TYPE=WKTYPE,KEY=((R6))           
+                                                                
+         WKR15  = R15                       : ÿ¿∞›•∫∞ƒﬁ         
+         WKMRC  = WK@MRC                    : ÿ¿∞›•∫∞ƒﬁ         
+                                                                
+         IF     (WKR15 > 4)                 : ¥◊∞ ?             
+             WKSTAT = AAI@DRSTAT            : DL/IΩ√∞¿Ω•∫∞ƒﬁ    
+             QFS@RC = 'N'                   : ÿ¿∞›•∫∞ƒﬁ         
+             IF     (WKDBID = 'QES')        :êÊì˙ïtDB ?       
+                 QFS@RSN = '301'            : ÿ∞Ωﬁ›•∫∞ƒﬁ        
+             ELSE                                               
+                 QFS@RSN = '300'            : ÿ∞Ωﬁ›•∫∞ƒﬁ        
+             ENDIF                                              
+             SUBTURN RR=12                                      
+         ENDIF                                                  
+                                                                
+         SUBEXIT RR=WKR15                                       
+         EJECT                                                  
+****************************************************************
+*DBæ∏ﬁ“›ƒÇÃë}ì¸                                             
+****************************************************************
+DBINSRT  SUBENTRY                                               
+                                                                
+         \ACINSRT DB=WKDBID,SEGM=WKSEGM,ADDR=WKPSEGM            
+                                                                
+         SUBCALL INWTCHK                    : ÿ¿∞›•∫∞ƒﬁ•¡™Ø∏    
+                                                                
+         SUBEXIT                                                
+         EJECT                                                  
+****************************************************************
+*DBæ∏ﬁ“›ƒÇÃèëÇ´çûÇ›                                         
+****************************************************************
+DBWRITE  SUBENTRY                                               
+                                                                
+         \ACWRITE DB=WKDBID,SEGM=WKSEGM,ADDR=WKPSEGM            
+                                                                
+         SUBCALL INWTCHK                    : ÿ¿∞›•∫∞ƒﬁ•¡™Ø∏    
+         SUBEXIT                                                
+         EJECT                                                  
+****************************************************************
+*\ACINSRT/\ACWRITEœ∏€•ÿ¿∞›•∫∞ƒﬁ ¡™Ø∏                          
+****************************************************************
+INWTCHK  SUBENTRY                                               
+                                                                
+         IF     (WK@RC ˝= 'Y')              : ¥◊∞ ?             
+             WKSTAT = AAI@DRSTAT            : DL/IΩ√∞¿Ω•∫∞ƒﬁ    
+             QFS@RC = 'N'                   : ÿ¿∞›•∫∞ƒﬁ         
+             IF     (WKDBID = 'QES')        :êÊì˙ïtDB ?       
+                 QFS@RSN = '301'            : ÿ∞Ωﬁ›•∫∞ƒﬁ        
+             ELSE                                               
+                 QFS@RSN = '300'            : ÿ∞Ωﬁ›•∫∞ƒﬁ        
+             ENDIF                                              
+             SUBTURN RR=12                                      
+         ENDIF                                                  
+                                                                
+         SUBEXIT                                                
+         EJECT                                                  
+****************************************************************
+* LTORG                                                         
+****************************************************************
+         LTORG                                                  
+****************************************************************
+* ∫›Ω¿›ƒ                                                        
+****************************************************************
+         DS     0F                                              
+CNPQESA  DC     A(CNQESA)                   : QESAèâä˙ ﬂ¿∞›   
+CNPQESB  DC     A(CNQESB)                   : QESBèâä˙ ﬂ¿∞›   
+CNPQEXA  DC     A(CNQEXA)                   : QEXAèâä˙ ﬂ¿∞›   
+                                                                
+CNQESA   DS     0F                                              
+         \#QESA GEN=C,ID=#                                      
+                                                                
+CNQESB   DS     0F                                              
+         \#QESB GEN=C,ID=#                                      
+                                                                
+CNQEXA   DS     0F                                              
+         \#QEXA GEN=C,ID=#                                      
+                                                                
+         PGMEND                                                 
+
