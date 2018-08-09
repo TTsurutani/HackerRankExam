@@ -1,9 +1,33 @@
 -- かつ、と、またはの複合条件に対応するには、どんな書式がベスト？
 
 import Data.List (isInfixOf)
+import System.Directory (getDirectoryContents)
+
+type Notion = String
+type SourceName = String
+type SourceCode = [String]
+type Keyword = String
+type Func = Keyword -> SourceCode -> Bool
+type Condition = (Keyword,Func)
+
 main :: IO ()
 main = do 
-  source <- words <$> getContents
+  list <- getDirectoryContents "."
+  let list' = init.init $ list
+  print list'
+  mapM_ (check . getSourceCode) list'
+  --check source
+
+getSourceCode :: SourceName -> IO SourceCode
+getSourceCode name = (name :) <$> (words <$> readFile name)
+
+
+check :: IO SourceCode -> IO()  
+check source' = do  
+  source <- source'
+  print $ head source
+  --let z = filter ((||) <$> ( == "IF") <*> (== "ENDIF")) source
+  --print z
   anyChecks "1-03 SUBENTRY : "                 [("SUBENTRY",elem)] source
   anyChecks "2-01 DOO : "                      [("DOO",elem)] source
   anyChecks "2-02 use SWITCH possibillity :  " [("ENDIF",elem),("ENDDSTBL",elem)] source
@@ -30,22 +54,16 @@ main = do
   anyChecks "B-2-05,6 OPEN&CLOSE : "           [("OPEN",elem),("CLOSE",elem)] source
   anyChecks "6-01 ORG : "                      [("ORG",elem)] source
 
-type Notion = String
-type SourceCode = [String]
-type Keyword = String
-type Func = Keyword -> SourceCode -> Bool
-type Condition = (Keyword,Func)
-
 anyChecks :: Notion -> [Condition] -> SourceCode -> IO()
 anyChecks _ [] _ = return ()
 anyChecks notion ((key,func):cs) source
-  | func key source = putStrLn notion
+  | not $ func key source = putStrLn notion
   | otherwise = anyChecks notion cs source        
 
 andChecks :: Notion -> [Condition] -> SourceCode -> IO()
 andChecks notion [] _ = putStrLn notion
 andChecks notion ((key,func):cs) source
-  | func key source = andChecks notion cs source
+  | not $ func key source = andChecks notion cs source
   | otherwise = return ()
 
 -- |
