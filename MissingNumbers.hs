@@ -1,9 +1,9 @@
-import Data.List(sort)
+import Data.List(sort,nub)
 
 main :: IO()
 main = do
   [_,a,_,b] <- map words . lines <$> getContents
-  let ans = unwords. sort . solve a $ b
+  let ans = unwords . nub . sort . solve a $ b
   putStr ans
 
 solve :: Eq a => [a] -> [a] -> [a]
