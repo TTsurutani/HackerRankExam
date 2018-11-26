@@ -11,7 +11,7 @@ decode ([_,k]:xs:rest) = f k xs : decode rest
 f :: (Num a, Ord a) => Int -> [a] -> String
 f k xs = if f' then "YES" else "NO"
            where
-             f' = (k >=) . length . filter (>= 0) $ xs
+             f' = (k >) . length . filter (<= 0) $ xs
 
 -- type input\AngryProfessor.txt | stack runghc AngryProfessor.hs
 -- https://www.hackerrank.com/challenges/angry-professor/problem
