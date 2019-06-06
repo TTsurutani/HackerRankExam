@@ -16,7 +16,18 @@ judge num target = not $ all (divable target) [2 .. num]
 divable :: Int -> Int -> Bool
 divable target n
    | target `mod` n == 0 = True
-   |otherwise            = False
+   | otherwise            = False
 
 -- https://www.hackerrank.com/contests/projecteuler/challenges/euler005
 -- type input\euler005.txt | stack runghc euler005.hs
+
+base :: [Integer]
+base = map (*20) [1..]
+
+furui :: [Integer] -> [Integer] -> [Integer]
+furui [] a = a
+furui (x:xs) zs = furui xs $ filter ((== 0).(`mod` x)) zs
+target = [19,18..3]
+
+--jikkou :: Integer
+jikkou n = head $ furui [n-1,n-2..3] $ map (*n) [1..]
