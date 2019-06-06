@@ -40,7 +40,7 @@ primes = 2 : filter (null . tail . primeFactors) [3,5..]
 
 -- 与えられた数の素因数（primeFactor)のリストを返す
 primeFactors :: Int -> [Int]
-primeFactors n = factor n primes
+primeFactors = factor primes
 
 -- 与えられたリストの要素を使った因数分解
 -- リストが素数の集合の場合は素因数分解になる
@@ -50,11 +50,11 @@ primeFactors n = factor n primes
 --　自分自身以外因数がない、というのが一行目のガード？
 --　ルートの自分自身が因数の最大値であるので、それを超えた自身で自分自身が素因数という意味か？
 -- 停止条件は
-factor :: Integral a => a -> [a] -> [a]
-factor n (p:ps) 
+factor :: Integral a => [a] -> a ->  [a]
+factor (p:ps) n
     | p*p > n        = [n]
-    | n `mod` p == 0 = p : factor (n `div` p) (p:ps)
-    | otherwise      =     factor n ps
+    | n `mod` p == 0 = p : factor  (p:ps) (n `div` p)
+    | otherwise      =     factor ps n 
 
 problem_3 :: Int        
 problem_3 = last (primeFactors 600851475143)

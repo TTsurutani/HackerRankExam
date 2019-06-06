@@ -1,5 +1,8 @@
-furui :: Integral a => [a] -> [a]
-furui (x:xs) = x : furui (filter (\z -> z `mod` x /= 0) xs)
+primes :: [Integer]
+primes = 2 : sieve [3,5..]
+
+sieve :: [Integer] -> [Integer]
+sieve (x:xs) = x : (sieve $ filter ((/= 0) . (`mod` x))  xs)
 
 div2 :: Int -> Maybe Int
 div2 x
