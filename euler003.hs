@@ -33,7 +33,7 @@ string2Int = read
 
 
 primes :: [Int]
-primes = 2 : filter (null . tail . primeFactors) [3,5..]
+primes = 2 : filter (null . tail . factor primes) [3,5..]
 -- null.tailはリストの要素が一つか、の判定
 -- (== 1).lengthと等価
 -- 素因数分解して要素が一つ＝自分自身だけのもの、という条件でfilter
@@ -52,7 +52,7 @@ primeFactors = factor primes
 -- 停止条件は
 factor :: Integral a => [a] -> a ->  [a]
 factor (p:ps) n
-    | p*p > n        = [n]
+    | p * p > n        = [n]
     | n `mod` p == 0 = p : factor  (p:ps) (n `div` p)
     | otherwise      =     factor ps n 
 
