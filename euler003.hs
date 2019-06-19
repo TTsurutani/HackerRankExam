@@ -51,10 +51,10 @@ primeFactors = factor primes
 --　ルートの自分自身が因数の最大値であるので、それを超えた自身で自分自身が素因数という意味か？
 -- 停止条件は
 factor :: Integral a => [a] -> a ->  [a]
-factor (p:ps) n
-    | p * p > n        = [n]
-    | n `mod` p == 0 = p : factor  (p:ps) (n `div` p)
-    | otherwise      =     factor ps n 
+factor (x:xs) n
+    | x * x > n        = [n]
+    | n `mod` x == 0 = x : factor  (x:xs) (n `div` x)
+    | otherwise      =     factor xs n 
 
 problem_3 :: Int        
 problem_3 = last (primeFactors 600851475143)
