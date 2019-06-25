@@ -1,9 +1,9 @@
 iti :: [String]
 iti = ["","one","two","three","four","five","six","seven","eight","nine"]
 juu' :: [String]
-juu' = ["ten","eleven","tweleve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"] 
+juu' = ["ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen", "nineteen"] 
 juu :: [String]
-juu  = ["","","twenty","thirty","fourty","fifty","sixty","seventy","eighty","ninety"]
+juu  = ["","","twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety"]
 
 -- 1000
 -- 100で割って商がゼロではない == 商 !! iti ++ conv 余り
