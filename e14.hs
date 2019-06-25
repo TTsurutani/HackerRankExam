@@ -20,6 +20,7 @@ j n = fst $ foldl' h (1,1) [2..n-1]
 import Data.List (maximumBy)
 import Data.Function (on)
 
+answer :: Integer
 answer = (head . maximumBy (compare `on` length) . map collatz) [1..1000000]
   where 
     collatz 1 = [1]
