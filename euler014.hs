@@ -12,7 +12,7 @@ f n
   | otherwise = Just (n, 3 * n + 1)
    -}
 
-import Data.List   
+import Data.List
 import Control.Parallel
 import Data.Word
 import Data.Array
@@ -28,7 +28,6 @@ j :: Integer -> Integer
 j n = fst $ foldl' h (1,1) [2..n-1]
 
 
-
 -- ペアのsndを比較して大きい方のペアを戻す（勝ち抜きのため）
 g :: Ord a => (a1, a) -> (a1, a) -> (a1, a)
 g x y = if snd x < snd y then y else x   
@@ -40,7 +39,7 @@ g x y = if snd x < snd y then y else x
 f :: Int -> Integer -> Int   
 f k 1 = k   
 f k n = f (k+1) 
-        $ if even n then div n 2 else 3*n + 1   
+        $ if even n then div n 2 else 3*n + 1
 
 collatzLen :: Int -> Word32 -> Int
 collatzLen c 1 = c
