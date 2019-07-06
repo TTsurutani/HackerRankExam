@@ -1,7 +1,6 @@
 import Data.Array
 import Data.List
 import Data.Ord (comparing)
-
 main :: IO()
 main = print 
        . fst 
@@ -10,7 +9,7 @@ main = print
        . syrs $ 1000000
 
 -- assocs :: Ix i => Array i e -> [(i, e)] アレイをリスト変換
-
+syrs :: (Ix i, Integral i, Num a) => i -> Array i a
 syrs n = array
     where 
       array = listArray (1,n) $ 0 : map syr [2..n]
