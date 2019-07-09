@@ -13,7 +13,6 @@ f n
    -}
 
 import Data.List
-import Control.Parallel
 import Data.Word
 import Data.Array
 import Data.Ord (comparing)
@@ -65,7 +64,7 @@ main = print soln
 -- par , pseqとも Controll.Parallelの関数
  -}
 
-
+syrs :: (Ix i,Num a,Integral i) => i -> Array i a
 syrs n = 
     a
     where 
@@ -75,5 +74,6 @@ syrs n =
         where 
         y = if even x then x `div` 2 else 3 * x + 1
 
+main :: IO()        
 main = 
     print . maximumBy (comparing snd) . assocs . syrs $ 1000000

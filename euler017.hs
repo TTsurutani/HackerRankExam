@@ -11,8 +11,6 @@ juu  = ["","","twenty","thirty","forty","fifty","sixty","seventy","eighty","nine
 -- 10で割って商が１ == 商 !! juu'
 -- otherwise (10で割って商がゼロ) == 余り !! iti
 
-
-
 conv :: Int -> String
 conv 1000 = "onethousand"
 conv n 
