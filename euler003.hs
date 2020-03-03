@@ -36,7 +36,7 @@ primes :: [Int]
 primes = 2 : filter (null . tail . factor primes) [3,5..]
 -- null.tailはリストの要素が一つか、の判定
 -- (== 1).lengthと等価
--- 素因数分解して要素が一つ＝自分自身だけのもの、という条件でfilter
+-- 素因数分解して要素が一つ＝自分自身だけのもの、という条件でfilterstac
 
 -- 与えられた数の素因数（primeFactor)のリストを返す
 primeFactors :: Int -> [Int]
