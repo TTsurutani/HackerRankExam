@@ -1,14 +1,16 @@
 import Data.List (sortOn)
+type Section = String
+type Separator = Char
 
-depth :: Char -> String -> Int
+depth :: Separator -> Section -> Int
 depth _ [] = 0
-depth y (x : xs)
-  | x == y = depth y xs + 1
-  | otherwise = depth y xs
+depth sep (x : xs)
+  | x == sep = depth sep xs + 1
+  | otherwise = depth sep xs
 
-head' :: [String] -> String
+head' :: [Section] -> Section
 head' [] = "Not Found"
 head' xs = head xs
 
-section :: [String] -> String
+section :: [Section] -> Section
 section = head' . sortOn (depth '.')
